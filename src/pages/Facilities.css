@@ -1,0 +1,73 @@
+/* Facilities page specific styles */
+.facilities-page {
+  min-height: 100vh;
+}
+
+/* Facility cards responsive adjustments */
+@media (max-width: 768px) {
+  .FacilitiesGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .FacilityCard {
+    margin-bottom: 1rem;
+  }
+  
+  .FacilityImage {
+    height: 150px;
+    font-size: 3rem;
+  }
+  
+  .FacilityContent {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .FacilityImage {
+    height: 120px;
+    font-size: 2.5rem;
+  }
+  
+  .FacilityContent {
+    padding: 1.25rem;
+  }
+  
+  .InfrastructureSection {
+    padding: 2rem;
+  }
+}
+
+/* Infrastructure items responsive adjustments */
+@media (max-width: 768px) {
+  .InfrastructureGrid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .InfrastructureItem {
+    padding: 1.25rem;
+  }
+  
+  .InfrastructureIcon {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .InfrastructureGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .InfrastructureItem {
+    padding: 1rem;
+  }
+  
+  .InfrastructureIcon {
+    font-size: 1.75rem;
+  }
+}
+
+

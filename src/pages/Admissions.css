@@ -1,0 +1,95 @@
+/* Admissions page specific styles */
+.admissions-page {
+  min-height: 100vh;
+}
+
+/* Process steps responsive adjustments */
+@media (max-width: 768px) {
+  .ProcessGrid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .ProcessStep {
+    padding: 1.5rem;
+  }
+  
+  .StepIcon {
+    font-size: 2.5rem;
+  }
+  
+  .StepTitle {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ProcessGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .ProcessStep {
+    padding: 1.25rem;
+  }
+  
+  .StepIcon {
+    font-size: 2rem;
+  }
+  
+  .RequirementsSection {
+    padding: 2rem;
+  }
+}
+
+/* Requirements cards responsive adjustments */
+@media (max-width: 768px) {
+  .RequirementsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .RequirementCard {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .RequirementCard {
+    padding: 1.25rem;
+  }
+  
+  .DownloadSection {
+    padding: 2rem;
+  }
+}
+
+/* Download buttons responsive adjustments */
+@media (max-width: 768px) {
+  .DownloadButton {
+    margin: 0.5rem;
+    padding: 0.875rem 1.5rem;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .DownloadButton {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+}
+
+/* Contact section responsive adjustments */
+@media (max-width: 768px) {
+  .ContactInfo {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .ContactItem {
+    justify-content: center;
+  }
+}
+
+

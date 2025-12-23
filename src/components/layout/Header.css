@@ -1,0 +1,54 @@
+.logo-icon {
+  font-size: 2rem;
+  margin-right: 0.5rem;
+}
+
+/* Scrolled state styles */
+.scrolled {
+  box-shadow: var(--shadow-md);
+}
+
+.scrolled .MainHeader {
+  padding: 0.5rem 0;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .TopBarContent {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  
+  .ContactInfo {
+    justify-content: center;
+  }
+  
+  .HeaderContent {
+    padding: 0 0.5rem;
+  }
+  
+  .Logo {
+    font-size: 1.25rem;
+  }
+  
+  .logo-icon {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .TopBar {
+    padding: 0.25rem 0;
+  }
+  
+  .TopBarContent {
+    font-size: 0.75rem;
+  }
+  
+  .ContactInfo {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
+

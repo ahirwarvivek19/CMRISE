@@ -1,0 +1,106 @@
+/* Contact page specific styles */
+.contact-page {
+  min-height: 100vh;
+}
+
+/* Contact form responsive adjustments */
+@media (max-width: 768px) {
+  .ContactGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .ContactForm {
+    padding: 1.5rem;
+  }
+  
+  .ContactInfo {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ContactForm {
+    padding: 1.25rem;
+  }
+  
+  .ContactInfo {
+    padding: 1.25rem;
+  }
+  
+  .FormInput,
+  .FormTextarea {
+    padding: 0.625rem;
+    font-size: 0.875rem;
+  }
+  
+  .SubmitButton {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* Contact items responsive adjustments */
+@media (max-width: 768px) {
+  .ContactItem {
+    padding: 0.875rem;
+    margin-bottom: 1rem;
+  }
+  
+  .ContactItem svg {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ContactItem {
+    padding: 0.75rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  
+  .ContactItem svg {
+    font-size: 1.5rem;
+  }
+}
+
+/* Social links responsive adjustments */
+@media (max-width: 768px) {
+  .SocialLinks {
+    gap: 0.75rem;
+  }
+  
+  .SocialLink {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  .SocialLinks {
+    gap: 0.5rem;
+  }
+  
+  .SocialLink {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Map section responsive adjustments */
+@media (max-width: 768px) {
+  .MapContainer {
+    height: 300px;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .MapContainer {
+    height: 250px;
+    font-size: 1.25rem;
+  }
+}
+
+

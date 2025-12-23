@@ -1,0 +1,84 @@
+/* Academics page specific styles */
+.academics-page {
+  min-height: 100vh;
+}
+
+/* Program cards responsive adjustments */
+@media (max-width: 768px) {
+  .ProgramsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .ProgramCard {
+    margin-bottom: 1rem;
+  }
+  
+  .ProgramHeader {
+    padding: 1.5rem;
+  }
+  
+  .ProgramIcon {
+    font-size: 2.5rem;
+  }
+  
+  .ProgramTitle {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ProgramHeader {
+    padding: 1.25rem;
+  }
+  
+  .ProgramIcon {
+    font-size: 2rem;
+  }
+  
+  .ProgramTitle {
+    font-size: 1.125rem;
+  }
+  
+  .CurriculumSection {
+    padding: 2rem;
+  }
+  
+  .InfrastructureSection {
+    padding: 2rem;
+  }
+}
+
+/* Subject cards responsive adjustments */
+@media (max-width: 768px) {
+  .CurriculumGrid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .SubjectCard {
+    padding: 1.25rem;
+  }
+  
+  .SubjectIcon {
+    font-size: 2rem;
+  }
+}
+
+/* Activity cards responsive adjustments */
+@media (max-width: 768px) {
+  .ActivitiesGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .ActivityCard {
+    padding: 1.5rem;
+  }
+  
+  .ActivityIcon {
+    font-size: 2.5rem;
+  }
+}
+
+

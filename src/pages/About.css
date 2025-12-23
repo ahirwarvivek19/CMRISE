@@ -1,0 +1,53 @@
+/* About page specific styles */
+.about-page {
+  min-height: 100vh;
+}
+
+/* Timeline responsive adjustments */
+@media (max-width: 768px) {
+  .Timeline::before {
+    left: 2rem;
+  }
+  
+  .TimelineItem:nth-child(odd) .timeline-content,
+  .TimelineItem:nth-child(even) .timeline-content {
+    margin-left: 4rem;
+    margin-right: 0;
+    padding-left: 1rem;
+    padding-right: 0;
+    text-align: left;
+  }
+  
+  .TimelineItem:nth-child(odd) .timeline-dot,
+  .TimelineItem:nth-child(even) .timeline-dot {
+    left: 2rem;
+    right: auto;
+    transform: none;
+  }
+}
+
+/* Content grid responsive adjustments */
+@media (max-width: 768px) {
+  .ContentGrid {
+    gap: 2rem;
+  }
+  
+  .ContentImage {
+    height: 250px;
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ContentImage {
+    height: 200px;
+    font-size: 2rem;
+  }
+  
+  .ValuesGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+
