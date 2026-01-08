@@ -2,6 +2,7 @@
   "name": "cmrise-ujjain-website",
   "version": "1.0.0",
   "description": "Official website for CMRISE Ujjain School",
+  "homepage": "https://ahirwarvivek19.github.io/CMRISE",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^6.6.4",
