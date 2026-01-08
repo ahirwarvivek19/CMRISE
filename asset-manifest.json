@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/CMRISE/static/css/main.f58d5c99.css",
+    "main.js": "/CMRISE/static/js/main.527e3548.js",
+    "static/js/453.2b99f14d.chunk.js": "/CMRISE/static/js/453.2b99f14d.chunk.js",
+    "index.html": "/CMRISE/index.html",
+    "main.f58d5c99.css.map": "/CMRISE/static/css/main.f58d5c99.css.map",
+    "main.527e3548.js.map": "/CMRISE/static/js/main.527e3548.js.map",
+    "453.2b99f14d.chunk.js.map": "/CMRISE/static/js/453.2b99f14d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f58d5c99.css",
+    "static/js/main.527e3548.js"
+  ]
+}
