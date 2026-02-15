@@ -248,7 +248,11 @@ const Header = () => {
       <MainHeader>
         <HeaderContent>
           <Logo to="/">
-            <div className="logo-icon">🎓</div>
+            <img
+              src={`${process.env.PUBLIC_URL}/logo.png`}
+              alt="Sandipani Vidyalaya"
+              className="logo-icon"
+            />
             <LogoText>CMRISE Ujjain</LogoText>
           </Logo>
           
