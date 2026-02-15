@@ -253,7 +253,7 @@ const Header = () => {
               alt="Sandipani Vidyalaya"
               className="logo-icon"
             />
-            <LogoText>CMRISE Ujjain</LogoText>
+            <LogoText>Sandipani Vidyalaya</LogoText>
           </Logo>
           
           <Nav>

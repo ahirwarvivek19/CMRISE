@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# CMRISE Ujjain Website Deployment Script
+# Sandipani Vidyalaya Website Deployment Script
 # This script automates the deployment process
 
-echo "🚀 Starting deployment process for CMRISE Ujjain Website..."
+echo "🚀 Starting deployment process for Sandipani Vidyalaya Website..."
 
 # Check if we're in the right directory
 if [ ! -f "package.json" ]; then

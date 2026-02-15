@@ -20,7 +20,7 @@ export const en = {
 
   // Hero Section
   hero: {
-    title: 'Welcome to CMRISE Ujjain',
+    title: 'Welcome to Sandipani Vidyalaya',
     subtitle: 'Empowering minds, building futures through quality education and innovative learning approaches',
     primaryButton: 'Explore Programs',
     secondaryButton: 'Learn More',
@@ -40,15 +40,15 @@ export const en = {
   home: {
     stats: {
       title: 'Our Numbers Speak',
-      subtitle: 'Join thousands of students who have chosen CMRISE for their educational journey'
+      subtitle: 'Join thousands of students who have chosen Sandipani Vidyalaya for their educational journey'
     },
     features: {
-      title: 'Why Choose CMRISE?',
+      title: 'Why Choose Sandipani Vidyalaya?',
       subtitle: 'Discover what makes us the preferred choice for quality education'
     },
     cta: {
       title: 'Ready to Start Your Journey?',
-      subtitle: 'Join CMRISE Ujjain and become part of our success story',
+      subtitle: 'Join Sandipani Vidyalaya and become part of our success story',
       button: 'Apply Now'
     }
   },
@@ -56,14 +56,14 @@ export const en = {
   // About Page
   about: {
     hero: {
-      title: 'About CMRISE Ujjain',
+      title: 'About Sandipani Vidyalaya',
       subtitle: 'A legacy of excellence in education spanning over two decades, shaping minds and building futures'
     },
     story: {
       title: 'Our Story',
       subtitle: 'From humble beginnings to becoming a leading educational institution in Madhya Pradesh',
       legacyTitle: 'A Legacy of Excellence',
-      legacyDescription1: 'Founded in 1998, CMRISE Ujjain has been at the forefront of educational innovation and academic excellence. What started as a small school with a big vision has grown into one of the most respected educational institutions in the region.',
+      legacyDescription1: 'Founded in 1998, Sandipani Vidyalaya has been at the forefront of educational innovation and academic excellence. What started as a small school with a big vision has grown into one of the most respected educational institutions in the region.',
       legacyDescription2: 'Our journey has been marked by continuous growth, adaptation to changing educational landscapes, and an unwavering commitment to our core values. We believe that every child deserves access to quality education that not only imparts knowledge but also shapes character and builds confidence.',
       legacyPoints: {
         point1: 'Over 25 years of educational excellence',
@@ -82,7 +82,7 @@ export const en = {
     },
     coreValues: {
       title: 'Our Core Values',
-      subtitle: 'The fundamental principles that guide everything we do at CMRISE Ujjain'
+      subtitle: 'The fundamental principles that guide everything we do at Sandipani Vidyalaya'
     },
     values: {
       excellence: {
@@ -112,12 +112,12 @@ export const en = {
     },
     journey: {
       title: 'Our Journey Through Time',
-      subtitle: 'Key milestones that have shaped CMRISE Ujjain into what it is today'
+      subtitle: 'Key milestones that have shaped Sandipani Vidyalaya into what it is today'
     },
     timeline: {
       foundation: {
         title: 'Foundation',
-        description: 'CMRISE Ujjain was established with a vision to provide quality education.'
+        description: 'Sandipani Vidyalaya was established with a vision to provide quality education.'
       },
       expansion: {
         title: 'Expansion',
@@ -337,7 +337,7 @@ export const en = {
   // Admissions Page
   admissions: {
     hero: {
-      title: 'Join CMRISE Ujjain',
+      title: 'Join Sandipani Vidyalaya',
       subtitle: 'Begin your educational journey with us. We welcome students who are eager to learn and grow.'
     },
     tabs: {
@@ -449,7 +449,7 @@ export const en = {
     info: {
       address: {
         title: 'Address',
-        description: 'CMRISE Ujjain<br />Madhya Pradesh, India'
+        description: 'Sandipani Vidyalaya<br />Madhya Pradesh, India'
       },
       phone: {
         title: 'Phone'
@@ -467,7 +467,7 @@ export const en = {
     },
     map: {
       title: 'Find Us',
-      subtitle: 'Visit our campus and experience the CMRISE Ujjain difference',
+      subtitle: 'Visit our campus and experience the Sandipani Vidyalaya difference',
       coming_soon: 'Interactive Map Coming Soon',
       description: 'We\'re located in the heart of Ujjain, easily accessible by public transport and private vehicles.'
     }

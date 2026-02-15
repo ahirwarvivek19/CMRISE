@@ -321,7 +321,7 @@ const Footer = () => {
 
         <BottomBar>
           <p>
-            &copy; {new Date().getFullYear()} CMRISE Ujjain.{' '}
+            &copy; {new Date().getFullYear()} Sandipani Vidyalaya.{' '}
             {t('footer.copyright')} | {t('footer.poweredBy')}
           </p>
         </BottomBar>

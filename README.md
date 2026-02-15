@@ -1,6 +1,6 @@
-# CMRISE Ujjain - Official Website
+# Sandipani Vidyalaya - Official Website
 
-A modern, responsive website for CMRISE Ujjain School built with React, featuring reusable components and a production-ready architecture.
+A modern, responsive website for Sandipani Vidyalaya School built with React, featuring reusable components and a production-ready architecture.
 
 ## 🚀 Features
 
@@ -104,7 +104,7 @@ The website is automatically deployed to GitHub Pages through GitHub Actions:
 Create a `.env` file in the root directory:
 
 ```env
-REACT_APP_SCHOOL_NAME=CMRISE Ujjain
+REACT_APP_SCHOOL_NAME=Sandipani Vidyalaya
 REACT_APP_CONTACT_EMAIL=info@cmriseujjain.edu.in
 REACT_APP_PHONE=+91 1234567890
 ```
@@ -178,12 +178,12 @@ For support and questions:
 
 ## 🙏 Acknowledgments
 
-- Built with ❤️ for CMRISE Ujjain
+- Built with ❤️ for Sandipani Vidyalaya
 - Inspired by modern web design principles
 - Community-driven development approach
 
 ---
 
-**CMRISE Ujjain** - Excellence in Education, Innovation in Learning
+**Sandipani Vidyalaya** - Excellence in Education, Innovation in Learning
 
 
