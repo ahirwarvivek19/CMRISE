@@ -165,62 +165,68 @@ const Home = () => {
     {
       icon: <FaGraduationCap />,
       number: 500,
-      label: t('hero.stats.students', { count: 500 })
+      label: t('hero.stats.students', { count: 500 }),
     },
     {
       icon: <FaUsers />,
       number: 25,
-      label: t('hero.stats.teachers', { count: 25 })
+      label: t('hero.stats.teachers', { count: 25 }),
     },
     {
       icon: <FaTrophy />,
       number: 15,
-      label: t('hero.stats.awards', { count: 15 })
+      label: t('hero.stats.awards', { count: 15 }),
     },
     {
       icon: <FaBookOpen />,
       number: 25,
-      label: t('hero.stats.years', { count: 25 })
-    }
+      label: t('hero.stats.years', { count: 25 }),
+    },
   ];
 
   const features = [
     {
       icon: '🏗️',
       title: 'Modern Infrastructure',
-      description: 'State-of-the-art facilities with smart classrooms, laboratories, and sports complexes.',
-      button: t('common.learnMore')
+      description:
+        'State-of-the-art facilities with smart classrooms, laboratories, and sports complexes.',
+      button: t('common.learnMore'),
     },
     {
       icon: '📚',
       title: 'Comprehensive Curriculum',
-      description: 'Well-rounded education focusing on academic excellence and character development.',
-      button: t('common.learnMore')
+      description:
+        'Well-rounded education focusing on academic excellence and character development.',
+      button: t('common.learnMore'),
     },
     {
       icon: '👥',
       title: 'Individual Attention',
-      description: 'Small class sizes ensuring personalized attention and support for every student.',
-      button: t('common.viewAll')
+      description:
+        'Small class sizes ensuring personalized attention and support for every student.',
+      button: t('common.viewAll'),
     },
     {
       icon: '🎨',
       title: 'Extra-Curricular Activities',
-      description: 'Wide range of activities including sports, arts, music, and leadership programs.',
-      button: t('common.viewAll')
+      description:
+        'Wide range of activities including sports, arts, music, and leadership programs.',
+      button: t('common.viewAll'),
     },
     {
       icon: '🔬',
       title: 'Science & Technology',
-      description: 'Advanced laboratories and technology integration for hands-on learning experiences.',
-      button: t('common.learnMore')
+      description:
+        'Advanced laboratories and technology integration for hands-on learning experiences.',
+      button: t('common.learnMore'),
     },
     {
       icon: '🎭',
       title: 'Arts & Culture',
-      description: 'Creative expression through various art forms, music, and cultural activities.',
-      button: t('common.viewAll')
-    }
+      description:
+        'Creative expression through various art forms, music, and cultural activities.',
+      button: t('common.viewAll'),
+    },
   ];
 
   return (
@@ -230,7 +236,7 @@ const Home = () => {
         subtitle={t('hero.subtitle')}
         primaryButton={t('hero.primaryButton')}
         secondaryButton={t('hero.secondaryButton')}
-        onClick={() => window.location.href = '/admissions'}
+        onClick={() => (window.location.href = '/admissions')}
       />
 
       <StatsSection>
@@ -281,7 +287,7 @@ const Home = () => {
           <CTAButton
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => window.location.href = '/admissions'}
+            onClick={() => (window.location.href = '/admissions')}
           >
             {t('home.cta.button')}
           </CTAButton>
@@ -292,4 +298,3 @@ const Home = () => {
 };
 
 export default Home;
-
