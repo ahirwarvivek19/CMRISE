@@ -249,7 +249,7 @@ const Header = () => {
         <HeaderContent>
           <Logo to="/">
             <img
-              src={`${process.env.PUBLIC_URL}/logo.png`}
+              src={`${process.env.PUBLIC_URL}/logo.svg`}
               alt="Sandipani Vidyalaya"
               className="logo-icon"
             />
