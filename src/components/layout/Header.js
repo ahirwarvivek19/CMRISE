@@ -44,7 +44,7 @@ const ContactItem = styled.div`
 `;
 
 const MainHeader = styled.div`
-  padding: 1rem 0;
+  padding: 0;
   background: var(--background-primary);
 `;
 
@@ -59,7 +59,7 @@ const BrandRow = styled.div`
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding-bottom: 0.75rem;
+  padding-bottom: 0rem;
   border-bottom: 1px solid var(--border-color);
 
   @media (max-width: 768px) {
