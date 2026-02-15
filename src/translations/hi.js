@@ -12,10 +12,15 @@ export const hi = {
   // Header
   header: {
     contactInfo: 'संपर्क जानकारी',
+    schoolName: 'सांदीपनि शा.उ.मा.वि. महाराजवाड़ा क्रं.3 उज्जैन',
+    address: 'दाऊदखेड़ी, उज्जैन, एम.पी. 456010',
+    diseCode: 'DISE Code: 23210703123',
+    mpBoardCode: 'MP Board Affilation Code: 44105',
     phone: '+91 123 456 7890',
     email: 'info@cmriseujjain.edu.in',
-    address: 'उज्जैन, मध्य प्रदेश, भारत',
-    slogan: 'शिक्षा में उत्कृष्टता, सीखने में नवाचार'
+    slogan: 'शिक्षा में उत्कृष्टता, सीखने में नवाचार',
+    menuToggle: 'मेनू खोलें',
+    closeMenu: 'मेनू बंद करें'
   },
 
   // Hero Section

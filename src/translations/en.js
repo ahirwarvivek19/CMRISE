@@ -12,10 +12,15 @@ export const en = {
   // Header
   header: {
     contactInfo: 'Contact Information',
+    schoolName: 'Sandipani Govt. H.S.S. Maharajwada No.3 Ujjain',
+    address: 'Daudkhedi, Ujjain, M.P. 456010',
+    diseCode: 'DISE Code: 23210703123',
+    mpBoardCode: 'MP Board Affiliation Code: 44105',
     phone: '+91 123 456 7890',
     email: 'info@cmriseujjain.edu.in',
-    address: 'Ujjain, Madhya Pradesh, India',
-    slogan: 'Excellence in Education, Innovation in Learning'
+    slogan: 'Excellence in Education, Innovation in Learning',
+    menuToggle: 'Open menu',
+    closeMenu: 'Close menu'
   },
 
   // Hero Section
