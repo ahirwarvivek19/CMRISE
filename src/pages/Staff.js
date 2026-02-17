@@ -217,7 +217,7 @@ const Staff = () => {
                         {getPhotoSrc(member.id) ? (
                           <img
                             src={getPhotoSrc(member.id)}
-                            alt={member.name}
+                            alt={t(`staff.names.${member.id}`, { defaultValue: member.name })}
                             loading="lazy"
                           />
                         ) : (
@@ -227,7 +227,9 @@ const Staff = () => {
                         )}
                       </StaffPhoto>
                       <StaffInfo>
-                        <StaffName>{member.name}</StaffName>
+                        <StaffName>
+                          {t(`staff.names.${member.id}`, { defaultValue: member.name })}
+                        </StaffName>
                         <StaffDesignation>{member.designation}</StaffDesignation>
                       </StaffInfo>
                     </StaffCard>

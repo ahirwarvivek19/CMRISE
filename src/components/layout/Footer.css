@@ -12,23 +12,11 @@
   .SocialLinks {
     justify-content: center;
   }
-  
-  .NewsletterSection {
-    padding: 1.5rem;
-  }
 }
 
 @media (max-width: 480px) {
   .FooterContainer {
     padding: 2rem 0 1rem;
-  }
-  
-  .NewsletterSection {
-    padding: 1rem;
-  }
-  
-  .NewsletterForm {
-    max-width: 100%;
   }
   
   .SocialLinks {

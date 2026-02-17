@@ -111,91 +111,12 @@ const BottomBar = styled.div`
   font-size: 0.875rem;
 `;
 
-const NewsletterSection = styled.div`
-  background: var(--primary-color);
-  padding: 2rem;
-  border-radius: var(--border-radius);
-  margin-bottom: 2rem;
-  text-align: center;
-
-  h3 {
-    color: white;
-    margin-bottom: 1rem;
-  }
-
-  p {
-    color: #d1d5db;
-    margin-bottom: 1.5rem;
-  }
-`;
-
-const NewsletterForm = styled.form`
-  display: flex;
-  gap: 1rem;
-  max-width: 400px;
-  margin: 0 auto;
-
-  @media (max-width: 480px) {
-    flex-direction: column;
-  }
-`;
-
-const NewsletterInput = styled.input`
-  flex: 1;
-  padding: 0.75rem;
-  border: none;
-  border-radius: var(--border-radius);
-  font-size: 1rem;
-
-  &:focus {
-    outline: 2px solid var(--secondary-color);
-    outline-offset: 2px;
-  }
-`;
-
-const NewsletterButton = styled.button`
-  padding: 0.75rem 1.5rem;
-  background: var(--secondary-color);
-  color: white;
-  border: none;
-  border-radius: var(--border-radius);
-  font-weight: 500;
-  cursor: pointer;
-  transition: var(--transition);
-
-  &:hover {
-    background: #d97706;
-    transform: translateY(-1px);
-  }
-`;
-
 const Footer = () => {
   const { t } = useTranslation();
-
-  const handleNewsletterSubmit = (e) => {
-    e.preventDefault();
-    // Handle newsletter subscription
-    console.log('Newsletter subscription submitted');
-  };
 
   return (
     <FooterContainer>
       <FooterContent>
-        <NewsletterSection>
-          <h3>{t('footer.newsletter.title')}</h3>
-          <p>{t('footer.newsletter.description')}</p>
-          <NewsletterForm onSubmit={handleNewsletterSubmit}>
-            <NewsletterInput
-              type='email'
-              placeholder={t('footer.newsletter.placeholder')}
-              required
-            />
-            <NewsletterButton type='submit'>
-              {t('footer.newsletter.subscribe')}
-            </NewsletterButton>
-          </NewsletterForm>
-        </NewsletterSection>
-
         <FooterGrid>
           <FooterSection>
             <h3>{t('footer.quickLinks')}</h3>

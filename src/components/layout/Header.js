@@ -60,7 +60,7 @@ const BrandRow = styled.div`
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding-bottom: 0rem;
+  padding: 0.5rem 0 0;
   border-bottom: 1px solid var(--border-color);
 
   @media (max-width: 768px) {
@@ -142,13 +142,23 @@ const BrandText = styled.div`
 `;
 
 const BrandName = styled.span`
+  font-family: 'Oswald', sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--primary-color);
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
   line-height: 1.2;
+  color: #1e40af;
+  padding-bottom: 0.2rem;
+  border-bottom: 2px solid #60a5fa;
+  display: inline-block;
+  /* Subtle emboss: lighter top, darker bottom */
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.25), 0 1px 2px rgba(0, 0, 0, 0.15);
 
   @media (max-width: 768px) {
     font-size: 1.1rem;
+    border-bottom-width: 1.5px;
   }
 
   @media (max-width: 480px) {
@@ -157,10 +167,14 @@ const BrandName = styled.span`
 `;
 
 const BrandAddress = styled.span`
+  font-family: 'Oswald', sans-serif;
   font-size: 0.875rem;
-  color: var(--text-secondary, #666);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
   line-height: 1.3;
-  margin-top: 0.1rem;
+  margin-top: 0.15rem;
+  color: #4b5563;
 
   @media (max-width: 768px) {
     font-size: 0.8rem;
@@ -370,7 +384,7 @@ const Header = () => {
             <BrandSection to="/">
               <Logo>
                 <img
-                  src={`${process.env.PUBLIC_URL}/logo.svg`}
+                  src={`${process.env.PUBLIC_URL}/logo-new.png`}
                   alt={t('header.schoolName')}
                   className="logo-icon"
                 />
