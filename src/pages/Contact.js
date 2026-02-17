@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaYoutube } from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaFacebook, FaYoutube } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 import './Contact.css';
 
@@ -92,79 +92,11 @@ const ContactGrid = styled.div`
   }
 `;
 
-const ContactForm = styled.form`
-  background: var(--background-primary);
-  padding: 2rem;
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow-sm);
-  border: 1px solid var(--border-color);
-`;
-
-const FormGroup = styled.div`
-  margin-bottom: 1.5rem;
-`;
-
-const FormLabel = styled.label`
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-  color: var(--text-primary);
-`;
-
-const FormInput = styled.input`
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid var(--border-color);
-  border-radius: var(--border-radius);
-  font-size: 1rem;
-  transition: var(--transition);
-  
-  &:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
-  }
-`;
-
-const FormTextarea = styled.textarea`
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid var(--border-color);
-  border-radius: var(--border-radius);
-  font-size: 1rem;
-  min-height: 120px;
-  resize: vertical;
-  transition: var(--transition);
-  
-  &:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
-  }
-`;
-
-const SubmitButton = styled.button`
-  background: var(--primary-color);
-  color: white;
-  border: none;
-  padding: 1rem 2rem;
-  border-radius: var(--border-radius);
-  font-weight: 600;
-  cursor: pointer;
-  transition: var(--transition);
-  width: 100%;
-  
-  &:hover {
-    background: #1e3a8a;
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
-  }
-  
-  &:disabled {
-    background: var(--text-secondary);
-    cursor: not-allowed;
-    transform: none;
-  }
+const MapColumn = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 `;
 
 const ContactInfo = styled.div`
@@ -201,6 +133,7 @@ const ContactText = styled.div`
   p {
     color: var(--text-secondary);
     margin: 0;
+    white-space: pre-line;
   }
 `;
 
@@ -230,67 +163,27 @@ const SocialLink = styled.a`
   }
 `;
 
-const MapSection = styled.div`
-  margin: 3rem 0;
-  text-align: center;
-`;
-
 const MapContainer = styled.div`
   background: var(--background-accent);
+  width: 100%;
   height: 400px;
   border-radius: var(--border-radius);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  color: var(--primary-color);
+  overflow: hidden;
   border: 1px solid var(--border-color);
   
   @media (max-width: 768px) {
     height: 300px;
-    font-size: 1.5rem;
   }
 `;
 
+const MapFrame = styled.iframe`
+  width: 100%;
+  height: 100%;
+  border: 0;
+`;
+
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const { t } = useTranslation();
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      console.log('Form submitted:', formData);
-      setIsSubmitting(false);
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        subject: '',
-        message: ''
-      });
-      alert('Thank you for your message! We will get back to you soon.');
-    }, 1000);
-  };
-
-  const isFormValid = formData.name && formData.email && formData.message;
 
   return (
     <PageContainer>
@@ -317,73 +210,17 @@ const Contact = () => {
           </SectionSubtitle>
           
           <ContactGrid>
-            <ContactForm onSubmit={handleSubmit}>
-              <FormGroup>
-                <FormLabel htmlFor="name">{t('contact.form.name.label')}</FormLabel>
-                <FormInput
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleInputChange}
-                  required
-                  placeholder={t('contact.form.name.placeholder')}
+            <MapColumn>
+              <MapContainer>
+                <MapFrame
+                  title={t('contact.map.title')}
+                  src='https://maps.google.com/maps?q=SANDIPANI%20GOVT.%20H.S.S.%20MAHARAJWADA%20NO.3%20UJJAIN,%20Daudkhedi,%20Ujjain,%20M.P.%20456010&z=16&output=embed'
+                  loading='lazy'
+                  referrerPolicy='no-referrer-when-downgrade'
+                  allowFullScreen
                 />
-              </FormGroup>
-              
-              <FormGroup>
-                <FormLabel htmlFor="email">{t('contact.form.email.label')}</FormLabel>
-                <FormInput
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  required
-                  placeholder={t('contact.form.email.placeholder')}
-                />
-              </FormGroup>
-              
-              <FormGroup>
-                <FormLabel htmlFor="phone">{t('contact.form.phone.label')}</FormLabel>
-                <FormInput
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleInputChange}
-                  placeholder={t('contact.form.phone.placeholder')}
-                />
-              </FormGroup>
-              
-              <FormGroup>
-                <FormLabel htmlFor="subject">{t('contact.form.subject.label')}</FormLabel>
-                <FormInput
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleInputChange}
-                  placeholder={t('contact.form.subject.placeholder')}
-                />
-              </FormGroup>
-              
-              <FormGroup>
-                <FormLabel htmlFor="message">{t('contact.form.message.label')}</FormLabel>
-                <FormTextarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  required
-                  placeholder={t('contact.form.message.placeholder')}
-                />
-              </FormGroup>
-              
-              <SubmitButton type="submit" disabled={!isFormValid || isSubmitting}>
-                {isSubmitting ? t('contact.form.submit.sending') : t('contact.form.submit.button')}
-              </SubmitButton>
-            </ContactForm>
+              </MapContainer>
+            </MapColumn>
             
             <ContactInfo>
               <ContactItem>
@@ -406,7 +243,7 @@ const Contact = () => {
                 <FaEnvelope />
                 <ContactText>
                   <h4>{t('contact.info.email.title')}</h4>
-                  <p>info@cmriseujjain.edu.in</p>
+                  <p>maharajwada.no.3@gmail.com</p>
                 </ContactText>
               </ContactItem>
               
@@ -421,17 +258,21 @@ const Contact = () => {
               <div style={{ textAlign: 'center', marginTop: '2rem' }}>
                 <h4 style={{ color: 'var(--text-primary)', marginBottom: '1rem' }}>{t('contact.social.title')}</h4>
                 <SocialLinks>
-                  <SocialLink href="#" aria-label="Facebook">
+                  <SocialLink
+                    href='https://www.facebook.com/profile.php?id=100084242721730'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    aria-label='Facebook'
+                  >
                     <FaFacebook />
                   </SocialLink>
-                  <SocialLink href="#" aria-label="Twitter">
-                    <FaTwitter />
-                  </SocialLink>
-                  <SocialLink href="#" aria-label="Instagram">
-                    <FaInstagram />
-                  </SocialLink>
-                  <SocialLink href="#" aria-label="LinkedIn">
-                    <FaLinkedin />
+                  <SocialLink
+                    href='https://www.youtube.com/'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    aria-label='YouTube'
+                  >
+                    <FaYoutube />
                   </SocialLink>
                 </SocialLinks>
               </div>
@@ -439,28 +280,8 @@ const Contact = () => {
           </ContactGrid>
         </Container>
       </Section>
-
-      <Section style={{ background: 'var(--background-secondary)' }}>
-        <Container>
-          <MapSection>
-            <SectionTitle>{t('contact.map.title')}</SectionTitle>
-            <SectionSubtitle>
-              {t('contact.map.subtitle')}
-            </SectionSubtitle>
-            
-            <MapContainer>
-              🗺️ {t('contact.map.coming_soon')}
-            </MapContainer>
-            
-            <p style={{ color: 'var(--text-secondary)', marginTop: '1rem' }}>
-              {t('contact.map.description')}
-            </p>
-          </MapSection>
-        </Container>
-      </Section>
     </PageContainer>
   );
 };
 
 export default Contact;
-

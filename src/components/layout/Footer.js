@@ -6,9 +6,6 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
   FaFacebook,
-  FaTwitter,
-  FaInstagram,
-  FaLinkedin,
   FaYoutube,
 } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
@@ -192,20 +189,18 @@ const Footer = () => {
             <SocialLinks>
               <SocialLink
                 href='https://www.facebook.com/profile.php?id=100084242721730'
+                target='_blank'
+                rel='noopener noreferrer'
                 aria-label='Facebook'
               >
                 <FaFacebook />
               </SocialLink>
-              <SocialLink href='#' aria-label='Twitter'>
-                <FaTwitter />
-              </SocialLink>
-              <SocialLink href='#' aria-label='Instagram'>
-                <FaInstagram />
-              </SocialLink>
-              <SocialLink href='#' aria-label='LinkedIn'>
-                <FaLinkedin />
-              </SocialLink>
-              <SocialLink href='#' aria-label='YouTube'>
+              <SocialLink
+                href='https://www.youtube.com/'
+                target='_blank'
+                rel='noopener noreferrer'
+                aria-label='YouTube'
+              >
                 <FaYoutube />
               </SocialLink>
             </SocialLinks>

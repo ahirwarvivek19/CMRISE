@@ -18,7 +18,7 @@ export const en = {
     diseCode: 'DISE Code: 23210703123',
     mpBoardCode: 'MP Board Affiliation Code: 44105',
     phone: '+91 123 456 7890',
-    email: 'info@cmriseujjain.edu.in',
+    email: 'maharajwada.no.3@gmail.com',
     slogan: 'Excellence in Education, Innovation in Learning',
     menuToggle: 'Open menu',
     closeMenu: 'Close menu'
@@ -459,7 +459,7 @@ export const en = {
       subtitle: 'Our admission team is here to assist you with any questions or concerns.',
       contact: {
         phone: '+91 123 456 7890',
-        email: 'admissions@cmriseujjain.edu.in',
+        email: 'maharajwada.no.3@gmail.com',
         hours: 'Monday - Friday, 8:00 AM - 4:00 PM'
       }
     }
@@ -504,7 +504,7 @@ export const en = {
     info: {
       address: {
         title: 'Address',
-        description: 'Sandipani Vidyalaya<br />Madhya Pradesh, India'
+        description: 'Sandipani Govt. H.S.S. Maharajwada No. 3,\nDaudkhedi, Ujjain, M.P. 456010'
       },
       phone: {
         title: 'Phone'

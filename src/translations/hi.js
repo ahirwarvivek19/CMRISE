@@ -18,7 +18,7 @@ export const hi = {
     diseCode: 'DISE Code: 23210703123',
     mpBoardCode: 'MP Board Affilation Code: 44105',
     phone: '+91 123 456 7890',
-    email: 'info@cmriseujjain.edu.in',
+    email: 'maharajwada.no.3@gmail.com',
     slogan: 'शिक्षा में उत्कृष्टता, सीखने में नवाचार',
     menuToggle: 'मेनू खोलें',
     closeMenu: 'मेनू बंद करें'
@@ -459,7 +459,7 @@ export const hi = {
       subtitle: 'हमारी प्रवेश टीम आपकी किसी भी प्रश्न या चिंता में सहायता के लिए यहां है।',
       contact: {
         phone: '+91 123 456 7890',
-        email: 'admissions@cmriseujjain.edu.in',
+        email: 'maharajwada.no.3@gmail.com',
         hours: 'सोमवार - शुक्रवार, सुबह 8:00 बजे - शाम 4:00 बजे'
       }
     }
@@ -504,7 +504,7 @@ export const hi = {
     info: {
       address: {
         title: 'पता',
-        description: 'सीएमआरआईएसई उज्जैन<br />मध्य प्रदेश, भारत'
+        description: 'सांदीपनि शा. उ. मा. वि. महाराजवाड़ा क्र. 3,\nदाऊदखेड़ी, उज्जैन, म.प्र. 456010'
       },
       phone: {
         title: 'फोन'
