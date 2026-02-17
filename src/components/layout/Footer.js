@@ -269,7 +269,10 @@ const Footer = () => {
               </ContactItem>
             </ContactInfo>
             <SocialLinks>
-              <SocialLink href='#' aria-label='Facebook'>
+              <SocialLink
+                href='https://www.facebook.com/profile.php?id=100084242721730'
+                aria-label='Facebook'
+              >
                 <FaFacebook />
               </SocialLink>
               <SocialLink href='#' aria-label='Twitter'>

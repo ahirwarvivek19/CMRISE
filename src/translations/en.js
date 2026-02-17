@@ -5,6 +5,7 @@ export const en = {
     about: 'About',
     academics: 'Academics',
     facilities: 'Facilities',
+    staff: 'Staff',
     admissions: 'Admissions',
     contact: 'Contact'
   },
@@ -336,6 +337,19 @@ export const en = {
         title: 'Digital Resources',
         description: 'Online learning platforms and digital libraries'
       }
+    }
+  },
+
+  // Staff Page
+  staff: {
+    hero: {
+      title: 'Our Staff',
+      subtitle: 'Meet our dedicated faculty and staff who are committed to excellence in education'
+    },
+    departments: {
+      Administration: 'Administration',
+      TeachingStaff: 'Teaching Staff',
+      SupportStaff: 'Support Staff'
     }
   },
 

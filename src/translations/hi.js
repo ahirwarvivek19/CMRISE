@@ -5,6 +5,7 @@ export const hi = {
     about: 'हमारे बारे में',
     academics: 'शैक्षणिक',
     facilities: 'सुविधाएं',
+    staff: 'स्टाफ',
     admissions: 'प्रवेश',
     contact: 'संपर्क'
   },
@@ -336,6 +337,19 @@ export const hi = {
         title: 'डिजिटल संसाधन',
         description: 'ऑनलाइन सीखने के प्लेटफॉर्म और डिजिटल पुस्तकालय'
       }
+    }
+  },
+
+  // Staff Page
+  staff: {
+    hero: {
+      title: 'हमारा स्टाफ',
+      subtitle: 'शिक्षा में उत्कृष्टता के लिए प्रतिबद्ध हमारे समर्पित संकाय और कर्मचारियों से मिलें'
+    },
+    departments: {
+      Administration: 'प्रशासन',
+      TeachingStaff: 'शिक्षण स्टाफ',
+      SupportStaff: 'सहायक स्टाफ'
     }
   },
 

@@ -10,6 +10,7 @@ import Academics from './pages/Academics';
 import Facilities from './pages/Facilities';
 import Admissions from './pages/Admissions';
 import Contact from './pages/Contact';
+import Staff from './pages/Staff';
 
 import './App.css';
 
@@ -24,6 +25,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/academics" element={<Academics />} />
             <Route path="/facilities" element={<Facilities />} />
+            <Route path="/staff" element={<Staff />} />
             <Route path="/admissions" element={<Admissions />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>

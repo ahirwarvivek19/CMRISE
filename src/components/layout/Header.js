@@ -287,6 +287,7 @@ const Header = () => {
     { path: '/about', label: t('nav.about') },
     { path: '/academics', label: t('nav.academics') },
     { path: '/facilities', label: t('nav.facilities') },
+    { path: '/staff', label: t('nav.staff') },
     { path: '/admissions', label: t('nav.admissions') },
     { path: '/contact', label: t('nav.contact') },
   ];
