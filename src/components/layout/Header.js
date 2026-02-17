@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
-import { FaBars, FaTimes, FaPhone, FaEnvelope } from 'react-icons/fa';
+import { FaBars, FaTimes } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 import LanguageToggle from '../ui/LanguageToggle';
 import './Header.css';
@@ -20,27 +20,24 @@ const TopBar = styled.div`
   color: white;
   padding: 0.5rem 0;
   font-size: 0.875rem;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.75rem;
+  }
 `;
 
 const TopBarContent = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
-`;
-
-const ContactInfo = styled.div`
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-`;
-
-const ContactItem = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
 `;
 
 const MainHeader = styled.div`
@@ -52,6 +49,10 @@ const HeaderContent = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 0.5rem;
+
+  @media (max-width: 480px) {
+    padding: 0 0.25rem;
+  }
 `;
 
 const BrandRow = styled.div`
@@ -81,7 +82,7 @@ const BrandCodes = styled.div`
   flex-shrink: 0;
 
   @media (max-width: 768px) {
-    align-items: center;
+    display: none;
   }
 `;
 
@@ -93,7 +94,14 @@ const BrandSection = styled(Link)`
   color: inherit;
 
   @media (max-width: 768px) {
-    flex-direction: column;
+    flex: 1;
+    width: 100%;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+
+  @media (max-width: 480px) {
+    gap: 0.25rem;
   }
 `;
 
@@ -103,12 +111,34 @@ const Logo = styled.span`
   color: var(--primary-color);
   font-family: 'Poppins', sans-serif;
   flex-shrink: 0;
+
+  img {
+    height: 48px;
+    width: auto;
+  }
+
+  @media (max-width: 768px) {
+    img {
+      height: 40px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    img {
+      height: 32px;
+    }
+  }
 `;
 
 const BrandText = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
+
+  @media (max-width: 768px) {
+    align-items: center;
+    text-align: center;
+  }
 `;
 
 const BrandName = styled.span`
@@ -118,7 +148,11 @@ const BrandName = styled.span`
   line-height: 1.2;
 
   @media (max-width: 768px) {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1rem;
   }
 `;
 
@@ -126,6 +160,15 @@ const BrandAddress = styled.span`
   font-size: 0.875rem;
   color: var(--text-secondary, #666);
   line-height: 1.3;
+  margin-top: 0.1rem;
+
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.75rem;
+  }
 `;
 
 const NavRow = styled.div`
@@ -133,6 +176,15 @@ const NavRow = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem;
+
+  @media (max-width: 768px) {
+    justify-content: flex-start;
+    padding: 0.25rem 0.5rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0.15rem 0.4rem;
+  }
 `;
 
 const Nav = styled.nav`
@@ -190,6 +242,13 @@ const MobileMenuButton = styled.button`
 
   @media (max-width: 768px) {
     display: block;
+    font-size: 1.3rem;
+    padding: 0.4rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.1rem;
+    padding: 0.25rem;
   }
 `;
 
@@ -211,12 +270,17 @@ const MobileMenu = styled.div`
 const MobileMenuContent = styled.div`
   position: absolute;
   top: 0;
-  right: 0;
-  width: 300px;
+  left: 0;
+  width: 80%;
+  max-width: 320px;
   height: 100%;
   background: var(--background-primary);
   padding: 2rem;
   overflow-y: auto;
+  border-radius: 0 1.5rem 1.5rem 0;
+  box-shadow: var(--shadow-lg, 0 10px 30px rgba(0, 0, 0, 0.15));
+  transform: translateX(${props => (props.isOpen ? '0' : '-100%')});
+  transition: transform 0.3s ease-out;
 `;
 
 const MobileNav = styled.nav`
@@ -250,7 +314,7 @@ const MobileNavLink = styled(Link)`
 const CloseButton = styled.button`
   position: absolute;
   top: 1rem;
-  right: 1rem;
+  left: 1rem;
   background: none;
   border: none;
   font-size: 1.5rem;
@@ -296,19 +360,7 @@ const Header = () => {
     <HeaderContainer className={isScrolled ? 'scrolled' : ''}>
       <TopBar>
         <TopBarContent>
-          <ContactInfo>
-            <ContactItem>
-              <FaPhone />
-              <span>{t('header.phone')}</span>
-            </ContactItem>
-            <ContactItem>
-              <FaEnvelope />
-              <span>{t('header.email')}</span>
-            </ContactItem>
-          </ContactInfo>
-          <div>
-            <span>{t('header.slogan')}</span>
-          </div>
+          <span>Excellence in Education, Innovation in Learning</span>
         </TopBarContent>
       </TopBar>
       
@@ -357,7 +409,7 @@ const Header = () => {
       </MainHeader>
 
       <MobileMenu isOpen={isMobileMenuOpen}>
-        <MobileMenuContent>
+        <MobileMenuContent isOpen={isMobileMenuOpen}>
           <CloseButton
             onClick={closeMobileMenu}
             aria-label={t('header.closeMenu')}
