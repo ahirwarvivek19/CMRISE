@@ -22,7 +22,7 @@ fi
 
 # Run tests
 echo "🧪 Running tests..."
-npm test -- --coverage --watchAll=false
+npm test -- --run
 
 if [ $? -ne 0 ]; then
     echo "❌ Error: Tests failed"
@@ -77,5 +77,4 @@ else
 fi
 
 echo "🎉 Deployment process completed!"
-
 

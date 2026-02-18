@@ -29,11 +29,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
         
-      - name: Run ESLint
+      - name: Run linter
         run: npm run lint
         
       # - name: Run tests
-      #   run: npm test -- --coverage --watchAll=false
+      #   run: npm test -- --run
         
       # - name: Upload coverage reports
       #   uses: codecov/codecov-action@v3
@@ -67,7 +67,7 @@ jobs:
         env:
           CI: false
           # So assets load correctly at .../CMRISE/staging/
-          PUBLIC_URL: /CMRISE/staging
+          BASE_PATH: /CMRISE/staging/
           
       - name: Deploy to Staging
         uses: peaceiris/actions-gh-pages@v3
@@ -102,6 +102,7 @@ jobs:
         run: npm run build
         env:
           CI: false
+          BASE_PATH: /CMRISE/
           
       - name: Deploy to Production
         uses: peaceiris/actions-gh-pages@v3
