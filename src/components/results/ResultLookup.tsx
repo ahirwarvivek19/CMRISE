@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import type React from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
   fetchStudentResult,
@@ -92,7 +93,7 @@ const ResultLookup: React.FC<ResultLookupProps> = ({ compact = false, onResult }
       </form>
 
       {result && (
-        <div className="result-card" role="region" aria-live="polite" aria-label={t('results.panel.title')}>
+        <section className="result-card" aria-live="polite" aria-label={t('results.panel.title')}>
           <div className="result-card__head">
             <div>
               <h3 className="result-card__name">{result.studentName || t('results.panel.student')}</h3>
@@ -129,7 +130,7 @@ const ResultLookup: React.FC<ResultLookupProps> = ({ compact = false, onResult }
           ) : (
             <p className="result-lookup__hint">{t('results.panel.noSubjects')}</p>
           )}
-        </div>
+        </section>
       )}
 
       {!result && !compact && !error && !notFound && !isLoading && (

@@ -1,4 +1,4 @@
-import React from 'react';
+import type React from 'react';
 import './Section.css';
 
 type SectionVariant = 'default' | 'muted' | 'accent' | 'dark';
