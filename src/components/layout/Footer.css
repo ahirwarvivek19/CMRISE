@@ -1,32 +1,85 @@
-/* Footer responsive adjustments */
-@media (max-width: 768px) {
-  .FooterGrid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  
-  .FooterSection {
-    text-align: center;
-  }
-  
-  .SocialLinks {
-    justify-content: center;
-  }
+.site-footer {
+  background: var(--color-forest);
+  color: rgba(255, 255, 255, 0.88);
+  margin-top: auto;
 }
 
-@media (max-width: 480px) {
-  .FooterContainer {
-    padding: 2rem 0 1rem;
-  }
-  
-  .SocialLinks {
-    gap: 0.75rem;
-  }
-  
-  .SocialLink {
-    width: 35px;
-    height: 35px;
-  }
+.site-footer__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 3rem 0 2rem;
 }
 
+.site-footer__title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-saffron-light);
+  margin-bottom: 1rem;
+}
 
+.site-footer__links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.site-footer__links a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.site-footer__links a:hover {
+  color: #fff;
+  padding-left: 4px;
+}
+
+.site-footer__contact p {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.9rem;
+  margin-bottom: 0.65rem;
+  line-height: 1.5;
+}
+
+.site-footer__contact svg {
+  color: var(--color-saffron-light);
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.site-footer__social {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.site-footer__social a {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.site-footer__social a:hover {
+  background: var(--color-saffron);
+  transform: translateY(-2px);
+}
+
+.site-footer__bar {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.55);
+}

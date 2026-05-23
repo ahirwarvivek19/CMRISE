@@ -1,0 +1,65 @@
+/* Heritage Editorial — custom blue palette */
+:root {
+  /* Palette (darkest → lightest) */
+  --color-blue-900: #001d39;
+  --color-blue-800: #0a4174;
+  --color-blue-600: #49769f;
+  --color-blue-500: #4e8ea2;
+  --color-blue-400: #6ea2b3;
+  --color-blue-300: #7bbde8;
+  --color-blue-100: #bdd8e9;
+
+  /* Semantic roles */
+  --color-primary-deep: var(--color-blue-900);
+  --color-primary: var(--color-blue-800);
+  --color-primary-mid: var(--color-blue-600);
+  --color-primary-teal: var(--color-blue-500);
+  --color-primary-muted: var(--color-blue-400);
+  --color-primary-light: var(--color-blue-300);
+  --color-primary-soft: var(--color-blue-100);
+
+  /* Aliases used across stylesheets */
+  --color-forest: var(--color-primary);
+  --color-forest-mid: var(--color-primary-mid);
+  --color-forest-soft: var(--color-primary-soft);
+
+  --color-saffron: var(--color-blue-300);
+  --color-saffron-light: var(--color-blue-100);
+  --color-cream: #f2f8fc;
+  --color-paper: #ffffff;
+  --color-ink: var(--color-blue-900);
+  --color-ink-muted: var(--color-blue-600);
+  --color-ink-faint: var(--color-blue-400);
+  --color-border: #c5dce8;
+  --color-success: #059669;
+  --color-danger: #dc2626;
+
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --font-brand: 'Oswald', sans-serif;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 1px 3px rgba(0, 29, 57, 0.08);
+  --shadow-md: 0 8px 24px rgba(0, 29, 57, 0.12);
+  --shadow-lg: 0 16px 48px rgba(0, 29, 57, 0.16);
+
+  --max-width: 1180px;
+  --section-y: clamp(3rem, 6vw, 5rem);
+  --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Legacy aliases (existing components) */
+  --primary-color: var(--color-primary);
+  --secondary-color: var(--color-primary-light);
+  --accent-color: var(--color-primary-mid);
+  --text-primary: var(--color-ink);
+  --text-secondary: var(--color-ink-muted);
+  --background-primary: var(--color-paper);
+  --background-secondary: var(--color-cream);
+  --background-accent: var(--color-primary-soft);
+  --border-color: var(--color-border);
+  --border-radius: var(--radius-md);
+}

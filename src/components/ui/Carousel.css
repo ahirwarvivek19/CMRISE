@@ -1,0 +1,122 @@
+.carousel {
+  position: relative;
+  min-height: min(78vh, 640px);
+  overflow: hidden;
+  background: var(--color-forest);
+}
+
+.carousel__slide {
+  min-height: min(78vh, 640px);
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.carousel__inner {
+  padding: clamp(3rem, 8vw, 5rem) 1.25rem;
+  max-width: 720px;
+}
+
+.carousel__eyebrow {
+  font-family: var(--font-brand);
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-saffron-light);
+  margin-bottom: 1rem;
+}
+
+.carousel__title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.carousel__subtitle {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1.75rem;
+  max-width: 540px;
+}
+
+.carousel__cta {
+  margin-top: 0.25rem;
+}
+
+.carousel__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+  backdrop-filter: blur(8px);
+  z-index: 2;
+}
+
+.carousel__nav:hover {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.carousel__nav--prev {
+  left: 1rem;
+}
+
+.carousel__nav--next {
+  right: 1rem;
+}
+
+.carousel__dots {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 2;
+}
+
+.carousel__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-pill);
+  border: none;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  padding: 0;
+  transition: var(--transition);
+}
+
+.carousel__dot--active {
+  width: 28px;
+  background: var(--color-saffron-light);
+}
+
+@media (max-width: 640px) {
+  .carousel__nav {
+    width: 40px;
+    height: 40px;
+  }
+
+  .carousel__nav--prev {
+    left: 0.5rem;
+  }
+
+  .carousel__nav--next {
+    right: 0.5rem;
+  }
+}

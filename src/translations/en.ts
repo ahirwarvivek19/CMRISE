@@ -45,19 +45,119 @@ export const en = {
 
   // Home Page
   home: {
+    carousel: {
+      slide1: {
+        title: 'Where Tradition Meets Tomorrow',
+        subtitle:
+          'A nurturing campus in Ujjain dedicated to academic rigour, character, and confident young minds.',
+        cta: 'Explore Admissions',
+      },
+      slide2: {
+        title: 'Learning That Lasts a Lifetime',
+        subtitle:
+          'Experienced faculty, structured curriculum, and classrooms built for focus and discovery.',
+        cta: 'View Academics',
+      },
+      slide3: {
+        title: 'A Community That Cares',
+        subtitle:
+          'Sports, arts, science, and values — every student finds room to grow and belong.',
+        cta: 'Our Story',
+      },
+    },
     stats: {
+      eyebrow: 'At a glance',
       title: 'Our Numbers Speak',
-      subtitle: 'Join thousands of students who have chosen Sandipani Vidyalaya for their educational journey'
+      subtitle:
+        'Generations of families have trusted Sandipani Vidyalaya for holistic education in Maharajwada.',
+    },
+    results: {
+      eyebrow: 'Student portal',
+      title: 'Check Your Result',
+      subtitle:
+        'Enter your Scholar Number to view subject-wise marks and overall status — synced from our official records.',
+      quickCheck: 'Quick lookup',
+      quickHint: 'Results are loaded securely from the school Google Sheet.',
+      fullPortal: 'Open full result portal',
     },
     features: {
+      eyebrow: 'Why us',
       title: 'Why Choose Sandipani Vidyalaya?',
-      subtitle: 'Discover what makes us the preferred choice for quality education'
+      subtitle: 'Discover what makes us the preferred choice for quality education',
+      items: {
+        infrastructure: {
+          title: 'Modern Infrastructure',
+          text: 'Smart classrooms, laboratories, library, and sports facilities on a safe, well-maintained campus.',
+        },
+        curriculum: {
+          title: 'Comprehensive Curriculum',
+          text: 'Balanced academics with MP Board standards and emphasis on discipline and critical thinking.',
+        },
+        attention: {
+          title: 'Individual Attention',
+          text: 'Approachable teachers and manageable class sizes so every learner is seen and supported.',
+        },
+        activities: {
+          title: 'Extra-Curricular Activities',
+          text: 'Clubs, competitions, and cultural programmes that build confidence beyond textbooks.',
+        },
+        science: {
+          title: 'Science & Technology',
+          text: 'Hands-on labs and practical learning that connect concepts to the real world.',
+        },
+        arts: {
+          title: 'Arts & Culture',
+          text: 'Music, dance, and creative expression woven into the rhythm of school life.',
+        },
+      },
     },
     cta: {
       title: 'Ready to Start Your Journey?',
       subtitle: 'Join Sandipani Vidyalaya and become part of our success story',
-      button: 'Apply Now'
-    }
+      button: 'Apply Now',
+    },
+  },
+
+  results: {
+    hero: {
+      eyebrow: 'Official records',
+      title: 'Student Result Portal',
+      subtitle: 'Enter your Scholar Number to view marks and pass/fail status.',
+    },
+    form: {
+      cardTitle: 'Check Result',
+      cardSubtitle:
+        'Use the Scholar Number printed on your ID card or fee receipt. Data is fetched from the school spreadsheet.',
+      label: 'Scholar Number',
+      placeholder: 'Enter your Scholar Number',
+      hint: 'For discrepancies, contact the school office during working hours.',
+      submit: 'Check Result',
+      loading: 'Checking…',
+      errorEmpty: 'Please enter a valid Scholar Number.',
+      errorGeneric: 'Something went wrong while fetching the result.',
+      errorNotConfigured: 'Results service is not configured. Please contact the school.',
+      notConfigured:
+        'Admin: set VITE_GOOGLE_SHEET_ID in .env and publish the sheet (File → Share → Publish to web).',
+      notFound:
+        'No result found for this Scholar Number. Please verify the number or contact the office.',
+    },
+    panel: {
+      title: 'Result details',
+      student: 'Student',
+      scholar: 'Scholar No',
+      class: 'Class',
+      subject: 'Subject',
+      marks: 'Marks',
+      noSubjects: 'Subject-wise marks are not available for this record.',
+      empty: 'Search above to display marks and overall status here.',
+    },
+    help: {
+      title: 'Need help?',
+      item1: 'Scholar Number is case-sensitive — enter exactly as on your documents.',
+      item2: 'Sheet columns: A = Scholar No, B = Name, C = Class, subjects in between, last column = Pass/Fail.',
+      item3: 'Ensure the Google Sheet is published and shared for public read (gviz query).',
+      note: 'Displayed results are for student reference. Official documents are issued by the school only.',
+    },
   },
 
   // About Page
@@ -151,6 +251,14 @@ export const en = {
 
   // Academics Page
   academics: {
+    hero: {
+      title: 'Academics',
+      subtitle: 'Comprehensive programs designed for holistic development from primary through higher secondary.',
+    },
+    curriculum: {
+      title: 'Curriculum Overview',
+      subtitle: 'A balanced blend of core subjects, practical learning, and creative expression.',
+    },
     programs: {
       title: 'Our Educational Programs',
       subtitle: 'Comprehensive programs designed for holistic development',
@@ -218,6 +326,8 @@ export const en = {
       }
     },
     activities: {
+      title: 'Co-Curricular Activities',
+      subtitle: 'Beyond the classroom — sports, arts, clubs, and leadership development.',
       sports: {
         title: 'Sports & Athletics',
         description: 'Comprehensive sports program including cricket, football, basketball, athletics, and indoor games.'
@@ -247,6 +357,18 @@ export const en = {
 
   // Facilities Page
   facilities: {
+    hero: {
+      title: 'Campus Facilities',
+      subtitle: 'Modern infrastructure that supports learning, safety, and student wellbeing.',
+    },
+    overview: {
+      title: 'Learning Spaces & Amenities',
+      subtitle: 'Purpose-built facilities for academics, sports, arts, and digital literacy.',
+    },
+    infrastructureSection: {
+      title: 'Campus Infrastructure',
+      subtitle: 'Supporting systems that keep our campus safe, connected, and sustainable.',
+    },
     smart_classrooms: {
       title: 'Smart Classrooms',
       description: 'Modern classrooms equipped with interactive whiteboards, projectors, and digital learning tools.',

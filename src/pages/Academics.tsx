@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import {
   FaGraduationCap,
@@ -13,262 +12,12 @@ import {
   FaUsers,
 } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
-import './Academics.css';
-
-const PageContainer = styled.div`
-  min-height: 100vh;
-`;
-
-const HeroSection = styled.section`
-  background: linear-gradient(
-    135deg,
-    var(--primary-color) 0%,
-    var(--secondary-color) 100%
-  );
-  color: white;
-  padding: 6rem 0;
-  text-align: center;
-
-  @media (max-width: 768px) {
-    padding: 4rem 0;
-  }
-`;
-
-const HeroTitle = styled.h1`
-  font-size: 3.5rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  font-family: 'Poppins', sans-serif;
-
-  @media (max-width: 768px) {
-    font-size: 2.5rem;
-  }
-`;
-
-const HeroSubtitle = styled.p`
-  font-size: 1.25rem;
-  opacity: 0.9;
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.6;
-
-  @media (max-width: 768px) {
-    font-size: 1.125rem;
-  }
-`;
-
-const Section = styled.section`
-  padding: 4rem 0;
-
-  @media (max-width: 768px) {
-    padding: 2rem 0;
-  }
-`;
-
-const Container = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-`;
-
-const SectionTitle = styled.h2`
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 1rem;
-  font-family: 'Poppins', sans-serif;
-
-  @media (max-width: 768px) {
-    font-size: 2rem;
-  }
-`;
-
-const SectionSubtitle = styled.p`
-  text-align: center;
-  font-size: 1.125rem;
-  color: var(--text-secondary);
-  margin-bottom: 3rem;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-`;
-
-const ProgramsGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
-  margin: 3rem 0;
-
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-  }
-`;
-
-const ProgramCard = styled(motion.div)`
-  background: var(--background-primary);
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow-sm);
-  overflow: hidden;
-  border: 1px solid var(--border-color);
-
-  &:hover {
-    box-shadow: var(--shadow-lg);
-    transform: translateY(-4px);
-  }
-`;
-
-const ProgramHeader = styled.div`
-  background: var(--primary-color);
-  color: white;
-  padding: 2rem;
-  text-align: center;
-`;
-
-const ProgramIcon = styled.div`
-  font-size: 3rem;
-  margin-bottom: 1rem;
-`;
-
-const ProgramTitle = styled.h3`
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  font-family: 'Poppins', sans-serif;
-`;
-
-const ProgramSubtitle = styled.p`
-  opacity: 0.9;
-  font-size: 1rem;
-`;
-
-const ProgramContent = styled.div`
-  padding: 2rem;
-`;
-
-const ProgramDescription = styled.p`
-  color: var(--text-secondary);
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-`;
-
-const ProgramFeatures = styled.ul`
-  list-style: none;
-  padding: 0;
-  margin: 0;
-`;
-
-const ProgramFeature = styled.li`
-  color: var(--text-secondary);
-  margin-bottom: 0.75rem;
-  padding-left: 1.5rem;
-  position: relative;
-
-  &::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: var(--accent-color);
-    font-weight: bold;
-  }
-`;
-
-const CurriculumSection = styled.div`
-  background: var(--background-secondary);
-  padding: 3rem;
-  border-radius: var(--border-radius);
-  margin: 3rem 0;
-`;
-
-const CurriculumGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-`;
-
-const SubjectCard = styled(motion.div)`
-  background: var(--background-primary);
-  padding: 1.5rem;
-  border-radius: var(--border-radius);
-  text-align: center;
-  box-shadow: var(--shadow-sm);
-  border: 1px solid var(--border-color);
-
-  &:hover {
-    box-shadow: var(--shadow-md);
-    transform: translateY(-2px);
-  }
-`;
-
-const SubjectIcon = styled.div`
-  font-size: 2.5rem;
-  color: var(--primary-color);
-  margin-bottom: 1rem;
-`;
-
-const SubjectTitle = styled.h4`
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 0.5rem;
-  font-family: 'Poppins', sans-serif;
-`;
-
-const SubjectDescription = styled.p`
-  color: var(--text-secondary);
-  font-size: 0.875rem;
-  line-height: 1.5;
-`;
-
-const ActivitiesSection = styled.div`
-  margin: 3rem 0;
-`;
-
-const ActivitiesGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-`;
-
-const ActivityCard = styled(motion.div)`
-  background: var(--background-primary);
-  padding: 2rem;
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow-sm);
-  border: 1px solid var(--border-color);
-  text-align: center;
-
-  &:hover {
-    box-shadow: var(--shadow-md);
-    transform: translateY(-4px);
-  }
-`;
-
-const ActivityIcon = styled.div`
-  font-size: 3rem;
-  color: var(--secondary-color);
-  margin-bottom: 1rem;
-`;
-
-const ActivityTitle = styled.h4`
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 1rem;
-  font-family: 'Poppins', sans-serif;
-`;
-
-const ActivityDescription = styled.p`
-  color: var(--text-secondary);
-  line-height: 1.6;
-`;
+import PageHeader from '../components/layout/PageHeader';
+import Section from '../components/layout/Section';
 
 const Academics = () => {
-  // ...existing code...
-
   const { t } = useTranslation();
+
   const programs = [
     {
       icon: '👶',
@@ -303,187 +52,124 @@ const Academics = () => {
       description: t('academics.programs.higherSecondary.description'),
       features: [
         t('academics.programs.higherSecondary.features.scienceCommerceArts'),
-        t(
-          'academics.programs.higherSecondary.features.advancedLaboratoryFacilities'
-        ),
-        t(
-          'academics.programs.higherSecondary.features.careerCounselingGuidance'
-        ),
-        t(
-          'academics.programs.higherSecondary.features.competitiveExamPreparation'
-        ),
+        t('academics.programs.higherSecondary.features.advancedLaboratoryFacilities'),
+        t('academics.programs.higherSecondary.features.careerCounselingGuidance'),
+        t('academics.programs.higherSecondary.features.competitiveExamPreparation'),
         t('academics.programs.higherSecondary.features.leadershipDevelopment'),
       ],
     },
   ];
 
   const subjects = [
-    {
-      icon: <FaBookOpen />,
-      title: t('academics.subjects.languages.title'),
-      description: t('academics.subjects.languages.description'),
-    },
-    {
-      icon: <FaMicroscope />,
-      title: t('academics.subjects.mathematics.title'),
-      description: t('academics.subjects.mathematics.description'),
-    },
-    {
-      icon: <FaMicroscope />,
-      title: t('academics.subjects.sciences.title'),
-      description: t('academics.subjects.sciences.description'),
-    },
-    {
-      icon: <FaGlobe />,
-      title: t('academics.subjects.socialStudies.title'),
-      description: t('academics.subjects.socialStudies.description'),
-    },
-    {
-      icon: <FaLaptop />,
-      title: t('academics.subjects.computerScience.title'),
-      description: t('academics.subjects.computerScience.description'),
-    },
-    {
-      icon: <FaPalette />,
-      title: t('academics.subjects.artsCrafts.title'),
-      description: t('academics.subjects.artsCrafts.description'),
-    },
+    { icon: <FaBookOpen />, title: t('academics.subjects.languages.title'), description: t('academics.subjects.languages.description') },
+    { icon: <FaMicroscope />, title: t('academics.subjects.mathematics.title'), description: t('academics.subjects.mathematics.description') },
+    { icon: <FaMicroscope />, title: t('academics.subjects.sciences.title'), description: t('academics.subjects.sciences.description') },
+    { icon: <FaGlobe />, title: t('academics.subjects.socialStudies.title'), description: t('academics.subjects.socialStudies.description') },
+    { icon: <FaLaptop />, title: t('academics.subjects.computerScience.title'), description: t('academics.subjects.computerScience.description') },
+    { icon: <FaPalette />, title: t('academics.subjects.artsCrafts.title'), description: t('academics.subjects.artsCrafts.description') },
   ];
 
   const activities = [
-    {
-      icon: <FaFutbol />,
-      title: t('academics.activities.sports.title'),
-      description: t('academics.activities.sports.description'),
-    },
-    {
-      icon: <FaMusic />,
-      title: t('academics.activities.music.title'),
-      description: t('academics.activities.music.description'),
-    },
-    {
-      icon: <FaPalette />,
-      title: t('academics.activities.visualArts.title'),
-      description: t('academics.activities.visualArts.description'),
-    },
-    {
-      icon: <FaGraduationCap />,
-      title: t('academics.activities.academicClubs.title'),
-      description: t('academics.activities.academicClubs.description'),
-    },
-    {
-      icon: <FaUsers />,
-      title: t('academics.activities.leadershipPrograms.title'),
-      description: t('academics.activities.leadershipPrograms.description'),
-    },
-    {
-      icon: <FaLaptop />,
-      title: t('academics.activities.technologyInnovation.title'),
-      description: t('academics.activities.technologyInnovation.description'),
-    },
+    { icon: <FaFutbol />, title: t('academics.activities.sports.title'), description: t('academics.activities.sports.description') },
+    { icon: <FaMusic />, title: t('academics.activities.music.title'), description: t('academics.activities.music.description') },
+    { icon: <FaPalette />, title: t('academics.activities.visualArts.title'), description: t('academics.activities.visualArts.description') },
+    { icon: <FaGraduationCap />, title: t('academics.activities.academicClubs.title'), description: t('academics.activities.academicClubs.description') },
+    { icon: <FaUsers />, title: t('academics.activities.leadershipPrograms.title'), description: t('academics.activities.leadershipPrograms.description') },
+    { icon: <FaLaptop />, title: t('academics.activities.technologyInnovation.title'), description: t('academics.activities.technologyInnovation.description') },
   ];
 
   return (
-    <PageContainer>
-      <HeroSection>
-        <Container>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <HeroTitle>{t('academics.programs.title')}</HeroTitle>
-            <HeroSubtitle>{t('academics.programs.subtitle')}</HeroSubtitle>
-          </motion.div>
-        </Container>
-      </HeroSection>
+    <div className="page">
+      <PageHeader
+        eyebrow={t('nav.academics')}
+        title={t('academics.hero.title')}
+        subtitle={t('academics.hero.subtitle')}
+      />
 
-      <Section>
-        <Container>
-          <SectionTitle>{t('academics.programs.title')}</SectionTitle>
-          <SectionSubtitle>{t('academics.programs.subtitle')}</SectionSubtitle>
-          <ProgramsGrid>
-            {programs.map((program, index) => (
-              <ProgramCard
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
+      <Section id="programs">
+        <header className="section__header">
+          <p className="section__eyebrow">{t('academics.programs.title')}</p>
+          <h2 className="section__title">{t('academics.programs.title')}</h2>
+          <p className="section__subtitle">{t('academics.programs.subtitle')}</p>
+        </header>
+        <div className="program-grid">
+          {programs.map((program, index) => (
+            <motion.article
+              key={program.title}
+              className="program-card"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+            >
+              <div className="program-card__head">
+                <div className="program-card__icon">{program.icon}</div>
+                <h3 className="program-card__title">{program.title}</h3>
+                <p className="program-card__subtitle">{program.subtitle}</p>
+              </div>
+              <div className="program-card__body">
+                <p>{program.description}</p>
+                <ul>
+                  {program.features.map((f) => (
+                    <li key={f}>{f}</li>
+                  ))}
+                </ul>
+              </div>
+            </motion.article>
+          ))}
+        </div>
+      </Section>
+
+      <Section variant="muted" id="curriculum">
+        <header className="section__header">
+          <p className="section__eyebrow">{t('academics.curriculum.title')}</p>
+          <h2 className="section__title">{t('academics.curriculum.title')}</h2>
+          <p className="section__subtitle">{t('academics.curriculum.subtitle')}</p>
+        </header>
+        <div className="panel-inset">
+          <div className="mod-grid">
+            {subjects.map((subject, index) => (
+              <motion.article
+                key={subject.title}
+                className="mod-card"
+                initial={{ opacity: 0, scale: 0.96 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.06 }}
               >
-                <ProgramHeader>
-                  <ProgramIcon>{program.icon}</ProgramIcon>
-                  <ProgramTitle>{program.title}</ProgramTitle>
-                  <ProgramSubtitle>{program.subtitle}</ProgramSubtitle>
-                </ProgramHeader>
-                <ProgramContent>
-                  <ProgramDescription>{program.description}</ProgramDescription>
-                  <ProgramFeatures>
-                    {program.features.map((feature, featureIndex) => (
-                      <ProgramFeature key={featureIndex}>
-                        {feature}
-                      </ProgramFeature>
-                    ))}
-                  </ProgramFeatures>
-                </ProgramContent>
-              </ProgramCard>
+                <div className="mod-card__icon">{subject.icon}</div>
+                <h3 className="mod-card__title">{subject.title}</h3>
+                <p className="mod-card__text">{subject.description}</p>
+              </motion.article>
             ))}
-          </ProgramsGrid>
-        </Container>
+          </div>
+        </div>
       </Section>
 
-      <Section style={{ background: 'var(--background-secondary)' }}>
-        <Container>
-          <SectionTitle>{t('academics.subjects.languages.title')}</SectionTitle>
-          <SectionSubtitle>
-            {t('academics.subjects.languages.description')}
-          </SectionSubtitle>
-          <CurriculumSection>
-            <CurriculumGrid>
-              {subjects.map((subject, index) => (
-                <SubjectCard
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true, amount: 0.3 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                >
-                  <SubjectIcon>{subject.icon}</SubjectIcon>
-                  <SubjectTitle>{subject.title}</SubjectTitle>
-                  <SubjectDescription>{subject.description}</SubjectDescription>
-                </SubjectCard>
-              ))}
-            </CurriculumGrid>
-          </CurriculumSection>
-        </Container>
+      <Section id="activities">
+        <header className="section__header">
+          <p className="section__eyebrow">{t('academics.activities.sports.title')}</p>
+          <h2 className="section__title">{t('academics.activities.title')}</h2>
+          <p className="section__subtitle">{t('academics.activities.subtitle')}</p>
+        </header>
+        <div className="mod-grid">
+          {activities.map((activity, index) => (
+            <motion.article
+              key={activity.title}
+              className="mod-card"
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.06 }}
+            >
+              <div className="mod-card__icon">{activity.icon}</div>
+              <h3 className="mod-card__title">{activity.title}</h3>
+              <p className="mod-card__text">{activity.description}</p>
+            </motion.article>
+          ))}
+        </div>
       </Section>
-
-      <Section>
-        <Container>
-          <SectionTitle>{t('academics.activities.sports.title')}</SectionTitle>
-          <SectionSubtitle>
-            {t('academics.activities.sports.description')}
-          </SectionSubtitle>
-          <ActivitiesGrid>
-            {activities.map((activity, index) => (
-              <ActivityCard
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <ActivityIcon>{activity.icon}</ActivityIcon>
-                <ActivityTitle>{activity.title}</ActivityTitle>
-                <ActivityDescription>
-                  {activity.description}
-                </ActivityDescription>
-              </ActivityCard>
-            ))}
-          </ActivitiesGrid>
-        </Container>
-      </Section>
-    </PageContainer>
+    </div>
   );
 };
 

@@ -36,7 +36,7 @@ const CardImage = styled.div<{ $background?: string; $image?: string; $overlay?:
     left: 0;
     right: 0;
     bottom: 0;
-    background: ${props => props.$overlay || 'rgba(30, 64, 175, 0.1)'};
+    background: ${props => props.$overlay || 'rgba(10, 65, 116, 0.12)'};
   }
 `;
 
