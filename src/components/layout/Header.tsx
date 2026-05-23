@@ -266,7 +266,7 @@ const MobileMenuButton = styled.button`
   }
 `;
 
-const MobileMenu = styled.div`
+const MobileMenu = styled.div<{ $isOpen?: boolean }>`
   display: none;
   position: fixed;
   top: 0;
@@ -277,11 +277,11 @@ const MobileMenu = styled.div`
   z-index: 1001;
 
   @media (max-width: 768px) {
-    display: ${props => props.isOpen ? 'block' : 'none'};
+    display: ${props => props.$isOpen ? 'block' : 'none'};
   }
 `;
 
-const MobileMenuContent = styled.div`
+const MobileMenuContent = styled.div<{ $isOpen?: boolean }>`
   position: absolute;
   top: 0;
   left: 0;
@@ -293,7 +293,7 @@ const MobileMenuContent = styled.div`
   overflow-y: auto;
   border-radius: 0 1.5rem 1.5rem 0;
   box-shadow: var(--shadow-lg, 0 10px 30px rgba(0, 0, 0, 0.15));
-  transform: translateX(${props => (props.isOpen ? '0' : '-100%')});
+  transform: translateX(${props => (props.$isOpen ? '0' : '-100%')});
   transition: transform 0.3s ease-out;
 `;
 
@@ -367,6 +367,7 @@ const Header = () => {
     { path: '/facilities', label: t('nav.facilities') },
     { path: '/staff', label: t('nav.staff') },
     { path: '/admissions', label: t('nav.admissions') },
+    { path: '/student-result', label: t('nav.results') },
     { path: '/contact', label: t('nav.contact') },
   ];
 
@@ -422,8 +423,8 @@ const Header = () => {
         </HeaderContent>
       </MainHeader>
 
-      <MobileMenu isOpen={isMobileMenuOpen}>
-        <MobileMenuContent isOpen={isMobileMenuOpen}>
+      <MobileMenu $isOpen={isMobileMenuOpen}>
+        <MobileMenuContent $isOpen={isMobileMenuOpen}>
           <CloseButton
             onClick={closeMobileMenu}
             aria-label={t('header.closeMenu')}

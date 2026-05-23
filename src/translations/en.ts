@@ -7,6 +7,7 @@ export const en = {
     facilities: 'Facilities',
     staff: 'Staff',
     admissions: 'Admissions',
+    results: 'Results',
     contact: 'Contact'
   },
 

@@ -13,9 +13,9 @@ const ToggleContainer = styled.div`
   }
 `;
 
-const LanguageButton = styled.button`
-  background: ${props => props.active ? 'var(--primary-color)' : 'transparent'};
-  color: ${props => props.active ? 'white' : 'var(--text-primary)'};
+const LanguageButton = styled.button<{ $active?: boolean }>`
+  background: ${props => props.$active ? 'var(--primary-color)' : 'transparent'};
+  color: ${props => props.$active ? 'white' : 'var(--text-primary)'};
   border: 2px solid var(--primary-color);
   padding: 0.5rem 1rem;
   border-radius: var(--border-radius);
@@ -26,7 +26,7 @@ const LanguageButton = styled.button`
   min-width: 60px;
 
   &:hover {
-    background: ${props => props.active ? 'var(--primary-color)' : 'var(--background-accent)'};
+    background: ${props => props.$active ? 'var(--primary-color)' : 'var(--background-accent)'};
     transform: translateY(-1px);
     box-shadow: var(--shadow-lg);
   }
@@ -53,14 +53,14 @@ const LanguageToggle = () => {
   return (
     <ToggleContainer>
       <LanguageButton
-        active={currentLanguage === 'en'}
+        $active={currentLanguage === 'en'}
         onClick={() => changeLanguage('en')}
         aria-label="Switch to English"
       >
         EN
       </LanguageButton>
       <LanguageButton
-        active={currentLanguage === 'hi'}
+        $active={currentLanguage === 'hi'}
         onClick={() => changeLanguage('hi')}
         aria-label="हिंदी में बदलें"
       >

@@ -20,11 +20,11 @@ const CardContainer = styled(motion.div)`
   }
 `;
 
-const CardImage = styled.div`
+const CardImage = styled.div<{ $background?: string; $image?: string; $overlay?: string }>`
   width: 100%;
   height: 200px;
-  background: ${props => props.background || 'var(--background-accent)'};
-  background-image: ${props => props.image ? `url(${props.image})` : 'none'};
+  background: ${props => props.$background || 'var(--background-accent)'};
+  background-image: ${props => props.$image ? `url(${props.$image})` : 'none'};
   background-size: cover;
   background-position: center;
   position: relative;
@@ -36,7 +36,7 @@ const CardImage = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    background: ${props => props.overlay || 'rgba(30, 64, 175, 0.1)'};
+    background: ${props => props.$overlay || 'rgba(30, 64, 175, 0.1)'};
   }
 `;
 
@@ -142,7 +142,7 @@ const Card = ({
   stats,
   className,
   ...props
-}) => {
+}: any) => {
   const cardVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -162,9 +162,9 @@ const Card = ({
       {...props}
     >
       <CardImage 
-        image={image} 
-        background={background}
-        overlay={overlay}
+        $image={image} 
+        $background={background}
+        $overlay={overlay}
       >
         {badge && <CardBadge>{badge}</CardBadge>}
         {icon && <CardIcon>{icon}</CardIcon>}

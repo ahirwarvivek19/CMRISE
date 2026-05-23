@@ -11,6 +11,7 @@ import Facilities from './pages/Facilities';
 import Admissions from './pages/Admissions';
 import Contact from './pages/Contact';
 import Staff from './pages/Staff';
+import StudentResult from './pages/StudentResult';
 
 import './App.css';
 
@@ -28,6 +29,7 @@ function App() {
             <Route path="/staff" element={<Staff />} />
             <Route path="/admissions" element={<Admissions />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/student-result" element={<StudentResult />} />
           </Routes>
         </main>
         <Footer />

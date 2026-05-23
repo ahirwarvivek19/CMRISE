@@ -7,6 +7,7 @@ export const hi = {
     facilities: 'सुविधाएं',
     staff: 'स्टाफ',
     admissions: 'प्रवेश',
+    results: 'परिणाम',
     contact: 'संपर्क'
   },
 

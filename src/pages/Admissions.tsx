@@ -101,7 +101,7 @@ const ProcessGrid = styled.div`
   margin: 3rem 0;
 `;
 
-const ProcessStep = styled(motion.div)`
+const ProcessStep = styled(motion.div)<{ $stepNumber?: number }>`
   background: var(--background-primary);
   padding: 2rem;
   border-radius: var(--border-radius);
@@ -116,7 +116,7 @@ const ProcessStep = styled(motion.div)`
   }
 
   &::before {
-    content: '${(props) => props.stepNumber}';
+    content: '${(props) => props.$stepNumber}';
     position: absolute;
     top: -15px;
     left: 50%;
@@ -323,7 +323,7 @@ const Admissions = () => {
             {processSteps.map((step, index) => (
               <ProcessStep
                 key={index}
-                stepNumber={index + 1}
+                $stepNumber={index + 1}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}

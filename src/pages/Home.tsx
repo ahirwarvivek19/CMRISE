@@ -236,7 +236,8 @@ const Home = () => {
         subtitle={t('hero.subtitle')}
         primaryButton={t('hero.primaryButton')}
         secondaryButton={t('hero.secondaryButton')}
-        onClick={() => (window.location.href = '/admissions')}
+        onPrimaryClick={() => (window.location.href = '/admissions')}
+        onSecondaryClick={() => {}}
       />
 
       <StatsSection>
@@ -271,8 +272,8 @@ const Home = () => {
                 icon={feature.icon}
                 title={feature.title}
                 description={feature.description}
-                button={feature.button}
-                onClick={() => {}}
+                buttonText={feature.button}
+                onButtonClick={() => {}}
                 delay={index * 0.1}
               />
             ))}
