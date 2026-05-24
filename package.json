@@ -4,6 +4,9 @@
   "description": "Official website for Sandipani Vidyalaya",
   "homepage": "https://ahirwarvivek19.github.io/CMRISE",
   "private": true,
+  "engines": {
+    "node": ">=24.0.0"
+  },
   "dependencies": {
     "framer-motion": "^12.34.1",
     "i18next": "^25.8.10",
@@ -43,7 +46,7 @@
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@testing-library/user-event": "^14.6.1",
-    "@types/node": "^25.9.1",
+    "@types/node": "^24.0.0",
     "@types/react": "^19.2.15",
     "@types/react-dom": "^19.2.3",
     "@types/styled-components": "^5.1.36",
