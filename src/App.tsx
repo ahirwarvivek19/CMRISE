@@ -12,7 +12,7 @@ import Admissions from './pages/Admissions';
 import Contact from './pages/Contact';
 import Staff from './pages/Staff';
 import StudentResult from './pages/StudentResult';
-
+import Gallery from './pages/Gallery';
 import './App.css';
 
 function App() {
@@ -30,6 +30,7 @@ function App() {
             <Route path="/admissions" element={<Admissions />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/student-result" element={<StudentResult />} />
+            <Route path="/gallery" element={<Gallery />} />
           </Routes>
         </main>
         <Footer />

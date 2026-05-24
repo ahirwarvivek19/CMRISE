@@ -6,8 +6,8 @@ import './Carousel.css';
 
 export interface CarouselSlide {
   id: string;
-  title: string;
-  subtitle: string;
+  title?: string;
+  subtitle?: string;
   ctaLabel?: string;
   ctaHref?: string;
   image?: string;
@@ -62,7 +62,7 @@ const Carousel: React.FC<CarouselProps> = ({ slides, autoPlayMs = 6000, onCtaCli
           className="carousel__slide"
           style={{
             backgroundImage: slide.image
-              ? `linear-gradient(105deg, rgba(0, 29, 57, 0.9) 0%, rgba(10, 65, 116, 0.65) 45%, rgba(78, 142, 162, 0.4) 100%), url(${slide.image})`
+              ? `url("${slide.image}")`
               : undefined,
             backgroundColor: slide.accent || 'var(--color-primary)',
           }}
@@ -71,20 +71,22 @@ const Carousel: React.FC<CarouselProps> = ({ slides, autoPlayMs = 6000, onCtaCli
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="carousel__inner container">
-            <p className="carousel__eyebrow">Sandipani Vidyalaya</p>
-            <h1 className="carousel__title">{slide.title}</h1>
-            <p className="carousel__subtitle">{slide.subtitle}</p>
-            {slide.ctaLabel && (
-              <button
-                type="button"
-                className="btn btn--light carousel__cta"
-                onClick={() => onCtaClick?.(slide)}
-              >
-                {slide.ctaLabel}
-              </button>
-            )}
-          </div>
+          {slide.title && (
+            <div className="carousel__inner container">
+              <p className="carousel__eyebrow">Sandipani Vidyalaya</p>
+              <h1 className="carousel__title">{slide.title}</h1>
+              {slide.subtitle && <p className="carousel__subtitle">{slide.subtitle}</p>}
+              {slide.ctaLabel && (
+                <button
+                  type="button"
+                  className="btn btn--light carousel__cta"
+                  onClick={() => onCtaClick?.(slide)}
+                >
+                  {slide.ctaLabel}
+                </button>
+              )}
+            </div>
+          )}
         </motion.div>
       </AnimatePresence>
 
@@ -113,7 +115,7 @@ const Carousel: React.FC<CarouselProps> = ({ slides, autoPlayMs = 6000, onCtaCli
                 type="button"
                 role="tab"
                 aria-selected={i === index}
-                aria-label={`Slide ${i + 1}: ${s.title}`}
+                aria-label={`Slide ${i + 1}: ${s.title || 'Slide'}`}
                 className={`carousel__dot${i === index ? ' carousel__dot--active' : ''}`}
                 onClick={() => goTo(i)}
               />

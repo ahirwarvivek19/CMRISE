@@ -8,6 +8,7 @@ export const en = {
     staff: 'Staff',
     admissions: 'Admissions',
     results: 'Results',
+    gallery: 'Gallery',
     contact: 'Contact'
   },
 

@@ -8,6 +8,7 @@ export const hi = {
     staff: 'स्टाफ',
     admissions: 'प्रवेश',
     results: 'परिणाम',
+    gallery: 'गैलरी',
     contact: 'संपर्क'
   },
 

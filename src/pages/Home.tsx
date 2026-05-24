@@ -8,36 +8,15 @@ import Section from '../components/layout/Section';
 import ResultLookup from '../components/results/ResultLookup';
 import './Home.css';
 
+const carouselImports = import.meta.glob('../media/carousel/*.{png,jpg,jpeg,webp,avif}', { eager: true, query: '?url', import: 'default' });
+const carouselSlides: CarouselSlide[] = Object.values(carouselImports).map((src: unknown, index) => ({
+  id: `slide-${index}`,
+  image: src as string,
+}));
+
 const Home = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
-
-  const carouselSlides: CarouselSlide[] = [
-    {
-      id: 'welcome',
-      title: t('home.carousel.slide1.title'),
-      subtitle: t('home.carousel.slide1.subtitle'),
-      ctaLabel: t('home.carousel.slide1.cta'),
-      image:
-        'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1600&q=80',
-    },
-    {
-      id: 'excellence',
-      title: t('home.carousel.slide2.title'),
-      subtitle: t('home.carousel.slide2.subtitle'),
-      ctaLabel: t('home.carousel.slide2.cta'),
-      image:
-        'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1600&q=80',
-    },
-    {
-      id: 'community',
-      title: t('home.carousel.slide3.title'),
-      subtitle: t('home.carousel.slide3.subtitle'),
-      ctaLabel: t('home.carousel.slide3.cta'),
-      image:
-        'https://images.unsplash.com/photo-1427504490125-79a9ec92833f?auto=format&fit=crop&w=1600&q=80',
-    },
-  ];
 
   const handleCarouselCta = (slide: CarouselSlide) => {
     if (slide.id === 'welcome') navigate('/admissions');

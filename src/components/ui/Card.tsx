@@ -1,4 +1,4 @@
-import React from 'react';
+import type React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
@@ -129,6 +129,21 @@ const StatItem = styled.div`
   }
 `;
 
+interface CardProps {
+  title?: React.ReactNode;
+  description?: React.ReactNode;
+  image?: string;
+  icon?: React.ReactNode;
+  background?: string;
+  overlay?: string;
+  badge?: string;
+  buttonText?: string;
+  onButtonClick?: () => void;
+  stats?: Array<{ icon: React.ReactNode; value: React.ReactNode }>;
+  className?: string;
+  [key: string]: unknown;
+}
+
 const Card = ({
   title,
   description,
@@ -142,7 +157,7 @@ const Card = ({
   stats,
   className,
   ...props
-}: any) => {
+}: CardProps) => {
   const cardVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
