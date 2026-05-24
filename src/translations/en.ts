@@ -16,7 +16,7 @@ export const en = {
   header: {
     contactInfo: 'Contact Information',
     schoolName: 'SANDIPANI GOVT. H.S.S. MAHARAJWADA NO.3 UJJAIN',
-    address: 'Daudkhedi, Ujjain, M.P. 456010',
+    address: 'Daudkhedi, Ujjain, M.P. 456006',
     diseCode: 'DISE Code: 23210703123',
     mpBoardCode: 'MP Board Affiliation Code: 44105',
     phone: '+91 123 456 7890',
@@ -29,7 +29,7 @@ export const en = {
   // Hero Section
   hero: {
     title: 'Welcome to Sandipani Vidyalaya',
-    subtitle: 'Empowering minds, building futures through quality education and innovative learning approaches',
+    subtitle: 'A flagship initiative of the Government of Madhya Pradesh. We are transforming government school education by creating high-engagement classrooms, empowering teachers, and fostering holistic student development.',
     primaryButton: 'Explore Programs',
     secondaryButton: 'Learn More',
     stats: {
@@ -48,21 +48,21 @@ export const en = {
   home: {
     carousel: {
       slide1: {
-        title: 'Where Tradition Meets Tomorrow',
+        title: 'The Vision of Sandipani Vidyalaya',
         subtitle:
-          'A nurturing campus in Ujjain dedicated to academic rigour, character, and confident young minds.',
+          'Renamed by Hon\'ble Chief Minister Dr. Mohan Yadav, we are building a new era of education focusing on academic excellence, robust school leadership, and community engagement.',
         cta: 'Explore Admissions',
       },
       slide2: {
-        title: 'Learning That Lasts a Lifetime',
+        title: 'High-Engagement Classrooms',
         subtitle:
-          'Experienced faculty, structured curriculum, and classrooms built for focus and discovery.',
+          'Empowering our teachers to implement structured curricula, and transform every classroom into a hub of joyous learning.',
         cta: 'View Academics',
       },
       slide3: {
-        title: 'A Community That Cares',
+        title: 'Holistic Student Development',
         subtitle:
-          'Sports, arts, science, and values — every student finds room to grow and belong.',
+          'We believe in nurturing intellect, character, and practical skills, preparing our students not just for exams, but for life\'s broader challenges.',
         cta: 'Our Story',
       },
     },
@@ -84,31 +84,31 @@ export const en = {
     features: {
       eyebrow: 'Why us',
       title: 'Why Choose Sandipani Vidyalaya?',
-      subtitle: 'Discover what makes us the preferred choice for quality education',
+      subtitle: 'Discover what makes us a premier "Center of Excellence" in Madhya Pradesh',
       items: {
         infrastructure: {
           title: 'Modern Infrastructure',
-          text: 'Smart classrooms, laboratories, library, and sports facilities on a safe, well-maintained campus.',
+          text: 'Smart classrooms, advanced laboratories, libraries, and comprehensive sports facilities ensuring an optimal learning environment.',
         },
         curriculum: {
-          title: 'Comprehensive Curriculum',
-          text: 'Balanced academics with MP Board standards and emphasis on discipline and critical thinking.',
+          title: 'Joyful & Structured Learning',
+          text: 'We utilize interactive teaching methods and activity-based learning to make education engaging, meaningful, and deeply connected to real life.',
         },
         attention: {
-          title: 'Individual Attention',
-          text: 'Approachable teachers and manageable class sizes so every learner is seen and supported.',
+          title: 'Teacher Empowerment & Leadership',
+          text: 'Through continuous professional development and strong school leadership, our educators are equipped to bring out the best in every child.',
         },
         activities: {
-          title: 'Extra-Curricular Activities',
-          text: 'Clubs, competitions, and cultural programmes that build confidence beyond textbooks.',
+          title: 'Community Engagement',
+          text: 'We actively involve parents and the community to create a supportive, inclusive, and culturally rich educational ecosystem.',
         },
         science: {
-          title: 'Science & Technology',
-          text: 'Hands-on labs and practical learning that connect concepts to the real world.',
+          title: 'Science & Innovation',
+          text: 'Hands-on learning through well-equipped labs, encouraging scientific temper, curiosity, and critical problem-solving skills.',
         },
         arts: {
-          title: 'Arts & Culture',
-          text: 'Music, dance, and creative expression woven into the rhythm of school life.',
+          title: 'Arts & Character Building',
+          text: 'A strong emphasis on the arts, sports, and ethical values ensures that our students grow into responsible, well-rounded global citizens.',
         },
       },
     },
@@ -169,15 +169,15 @@ export const en = {
     },
     story: {
       title: 'Our Story',
-      subtitle: 'From humble beginnings to becoming a leading educational institution in Madhya Pradesh',
-      legacyTitle: 'A Legacy of Excellence',
-      legacyDescription1: 'Founded in 1998, Sandipani Vidyalaya has been at the forefront of educational innovation and academic excellence. What started as a small school with a big vision has grown into one of the most respected educational institutions in the region.',
-      legacyDescription2: 'Our journey has been marked by continuous growth, adaptation to changing educational landscapes, and an unwavering commitment to our core values. We believe that every child deserves access to quality education that not only imparts knowledge but also shapes character and builds confidence.',
+      subtitle: 'From a local institution to a beacon of educational excellence in Madhya Pradesh',
+      legacyTitle: 'The Transition to Sandipani Vidyalaya',
+      legacyDescription1: 'Formerly known as CM Rise School, our institution has been proudly renamed Sandipani Vidyalaya by Hon\'ble Chief Minister Dr. Mohan Yadav—paying homage to Maharshi Sandipani, the revered guru of Lord Krishna. As a flagship initiative of the Government of Madhya Pradesh, we are steadfastly developing into a premier "Center of Excellence".',
+      legacyDescription2: 'Our transformation is driven by a powerful vision to redefine government school education. With strategic partnerships empowering our capabilities, our focus is on four foundational pillars: Academic Rigour, Teacher Capacity Building, robust School Leadership, and active Community Engagement. We aim to build high-engagement classrooms where every child receives a joyful, holistic education that imparts knowledge, shapes strong character, and cultivates lifelong confidence.',
       legacyPoints: {
-        point1: 'Over 25 years of educational excellence',
-        point2: '500+ successful graduates',
-        point3: 'State-of-the-art infrastructure',
-        point4: 'Experienced and dedicated faculty'
+        point1: 'Renamed by Hon\'ble CM Dr. Mohan Yadav',
+        point2: 'Focus on high-engagement classrooms',
+        point3: 'State-of-the-art infrastructure & labs',
+        point4: 'Empowered, continuous-learning faculty'
       }
     },
     missionVision: {
@@ -253,16 +253,16 @@ export const en = {
   // Academics Page
   academics: {
     hero: {
-      title: 'Academics',
-      subtitle: 'Comprehensive programs designed for holistic development from primary through higher secondary.',
+      title: 'Academic Excellence',
+      subtitle: 'High-engagement learning programs designed for holistic student development, from primary through higher secondary.',
     },
     curriculum: {
-      title: 'Curriculum Overview',
-      subtitle: 'A balanced blend of core subjects, practical learning, and creative expression.',
+      title: 'Our Pedagogical Framework',
+      subtitle: 'A structured curriculum focusing on experiential learning, critical thinking, and real-world application.',
     },
     programs: {
       title: 'Our Educational Programs',
-      subtitle: 'Comprehensive programs designed for holistic development',
+      subtitle: 'Joyful and structured learning pathways aligned with the Sandipani Vidyalaya vision',
       primary: {
         title: 'Primary Education',
         subtitle: 'Foundation years (Classes 1-5)',
@@ -359,16 +359,16 @@ export const en = {
   // Facilities Page
   facilities: {
     hero: {
-      title: 'Campus Facilities',
-      subtitle: 'Modern infrastructure that supports learning, safety, and student wellbeing.',
+      title: 'World-Class Infrastructure',
+      subtitle: 'State-of-the-art facilities developed under the Sandipani Vidyalaya initiative to provide an optimal learning environment.',
     },
     overview: {
       title: 'Learning Spaces & Amenities',
-      subtitle: 'Purpose-built facilities for academics, sports, arts, and digital literacy.',
+      subtitle: 'Modern, purpose-built facilities empowering interactive and experiential learning.',
     },
     infrastructureSection: {
       title: 'Campus Infrastructure',
-      subtitle: 'Supporting systems that keep our campus safe, connected, and sustainable.',
+      subtitle: 'Advanced systems ensuring a safe, connected, and supportive educational ecosystem.',
     },
     smart_classrooms: {
       title: 'Smart Classrooms',
@@ -467,8 +467,8 @@ export const en = {
   // Staff Page
   staff: {
     hero: {
-      title: 'Our Staff',
-      subtitle: 'Meet our dedicated faculty and staff who are committed to excellence in education'
+      title: 'Our Educators',
+      subtitle: 'Meet our highly trained and empowered faculty, dedicated to driving high-engagement learning and academic excellence.'
     },
     departments: {
       Administration: 'Administration',
@@ -517,7 +517,7 @@ export const en = {
   admissions: {
     hero: {
       title: 'Join Sandipani Vidyalaya',
-      subtitle: 'Begin your educational journey with us. We welcome students who are eager to learn and grow.'
+      subtitle: 'Become part of Madhya Pradesh\'s premier educational transformation. We welcome students eager to thrive in a joyful learning environment.'
     },
     tabs: {
       process: 'Admission Process',
@@ -593,7 +593,7 @@ export const en = {
   contact: {
     hero: {
       title: 'Get in Touch',
-      subtitle: 'We\'d love to hear from you. Contact us for any questions, feedback, or inquiries.'
+      subtitle: 'Connect with Sandipani Vidyalaya. We welcome inquiries from parents, community members, and partners in education.'
     },
     section: {
       title: 'Contact Us',
@@ -628,7 +628,7 @@ export const en = {
     info: {
       address: {
         title: 'Address',
-        description: 'Sandipani Govt. H.S.S. Maharajwada No. 3,\nDaudkhedi, Ujjain, M.P. 456010'
+        description: 'Sandipani Govt. H.S.S. Maharajwada No. 3,\nDaudkhedi, Ujjain, M.P. 456006'
       },
       phone: {
         title: 'Phone'

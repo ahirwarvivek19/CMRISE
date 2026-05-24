@@ -26,7 +26,7 @@ const Contact = () => {
           <div className="contact-map">
             <iframe
               title={t('contact.map.title')}
-              src="https://maps.google.com/maps?q=SANDIPANI%20GOVT.%20H.S.S.%20MAHARAJWADA%20NO.3%20UJJAIN,%20Daudkhedi,%20Ujjain,%20M.P.%20456010&z=16&output=embed"
+              src="https://maps.google.com/maps?q=SANDIPANI%20GOVT.%20H.S.S.%20MAHARAJWADA%20NO.3%20UJJAIN,%20Daudkhedi,%20Ujjain,%20M.P.%20456006&z=16&output=embed"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               allowFullScreen

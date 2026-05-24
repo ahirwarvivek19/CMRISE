@@ -50,8 +50,8 @@ public/                 # Static assets
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/cmrise-ujjain-website.git
-   cd cmrise-ujjain-website
+   git clone https://github.com/yourusername/sandipani-ujjain-website.git
+   cd sandipani-ujjain-website
    ```
 
 2. **Install dependencies**
@@ -105,7 +105,7 @@ Create a `.env` file in the root directory:
 
 ```env
 REACT_APP_SCHOOL_NAME=Sandipani Vidyalaya
-REACT_APP_CONTACT_EMAIL=info@cmriseujjain.edu.in
+REACT_APP_CONTACT_EMAIL=info@sandipaniujjain.edu.in
 REACT_APP_PHONE=+91 1234567890
 ```
 
@@ -172,9 +172,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Support
 
 For support and questions:
-- **Email**: info@cmriseujjain.edu.in
+- **Email**: info@sandipaniujjain.edu.in
 - **Phone**: +91 1234567890
-- **Website**: [https://cmriseujjain.edu.in](https://cmriseujjain.edu.in)
+- **Website**: [https://sandipaniujjain.edu.in](https://sandipaniujjain.edu.in)
 
 ## 🙏 Acknowledgments
 
